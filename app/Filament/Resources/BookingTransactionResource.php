@@ -89,7 +89,7 @@ class BookingTransactionResource extends Resource
                         ->required()
                         ->maxLength(255),
 
-                        TextInput::make('booking_trx_id')
+                        TextInput::make('midtrans_booking_code')
                         ->required()
                         ->maxLength(255)
                     ]),
@@ -128,21 +128,28 @@ class BookingTransactionResource extends Resource
         return $table
             ->columns([
                 //
-                ImageColumn::make('ticket.thumbnail'),
+                ImageColumn::make('ticket.thumbnail')
+                ->label('Image'),
 
                 TextColumn::make('name')
                 ->searchable(),
+                
+                TextColumn::make('ticket.name')
+                ->searchable(),
+                
+                TextColumn::make('total_amount')
+                ->money('IDR'),
 
                 TextColumn::make('midtrans_booking_code')
                 ->searchable(),
 
-                IconColumn::make('is_paid')
-                ->boolean()
-                ->trueColor('success')
-                ->falseColor('danger')
-                ->trueIcon('heroicon-o-check-circle')
-                ->falseIcon('heroicon-o-x-circle')
-                ->label('Terverifikasi')
+                TextColumn::make('payment_status')
+                ->badge()
+                ->color(fn (string $state): string => match ($state) {
+                    'waiting' => 'warning',
+                    'success' => 'success',
+                    'failed' => 'danger'
+                })
 
             ])
             ->filters([
@@ -152,7 +159,9 @@ class BookingTransactionResource extends Resource
                 ->relationship('ticket', 'name')
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

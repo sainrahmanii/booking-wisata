@@ -16,6 +16,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\TimePicker;
 use Filament\Forms\Form;
+use Filament\Infolists\Components\TextEntry;
 use Filament\Notifications\Actions\ActionGroup;
 use Filament\Pages\Actions\ViewAction;
 use Filament\Resources\Resource;
@@ -109,7 +110,7 @@ class TicketResource extends Resource
                 ->searchable(),
 
                 TextColumn::make('price')
-                ->searchable(),
+                ->money('IDR'),
 
                 ImageColumn::make('thumbnail')
             ])

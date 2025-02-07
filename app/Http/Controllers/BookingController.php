@@ -16,6 +16,11 @@ class BookingController extends Controller
         $this->bookingService = $bookingService;
     }
 
+    public function checkBooking()
+    {
+        return view('front.check_booking');
+    }
+
     public function booking(Ticket $ticket)
     {
         return view('front.booking', compact('ticket'));

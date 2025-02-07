@@ -110,7 +110,7 @@
                     <div class="swiper-wrapper">
                         @forelse($popularTickets as $itemPopularTickets)
                         <div class="swiper-slide !w-fit">
-                            <a href="#" class="card">
+                            <a href="{{route('front.details', $itemPopularTickets->slug)}}" class="card">
                                 <div
                                     class="relative flex items-end w-[345px] h-[220px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
                                     <img src="{{Storage::url($itemPopularTickets->thumbnail)}}"
@@ -145,7 +145,7 @@
                     <div class="swiper-wrapper">
                         @forelse($categories as $itemCategories)
                         <div class="swiper-slide !w-fit">
-                            <a href="category.html" class="card">
+                            <a href="{{route('front.category', $itemCategories->slug)}}" class="card">
                                 <img src="{{Storage::url($itemCategories->icon)}}" class="w-24 h-24 rounded-[20px]"
                                     alt="icon">
                             </a>
@@ -160,86 +160,28 @@
                 <h2 class="px-4 font-bold">You Should Visit</h2>
                 <div class="swiper-visit w-full overflow-hidden">
                     <div class="swiper-wrapper">
+                        @forelse($sellers as $itemAllSeller)
                         <div class="swiper-slide !w-fit">
-                            <a href="city.html" class="card">
+                            <a href="{{route('front.seller', $itemAllSeller->slug)}}" class="card">
                                 <div
                                     class="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-4.png"
+                                    <img src="{{Storage::url($itemAllSeller->photo)}}"
                                         class="absolute w-full h-full object-cover" alt="thumbnail">
                                     <div
                                         class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
                                         <div>
-                                            <h3 class="font-bold text-white">Bogor</h3>
-                                            <p class="text-sm leading-[18px] text-white">31,473 Places</p>
+                                            <h3 class="font-bold text-white">{{$itemAllSeller->name}}</h3>
+                                            <p class="text-sm leading-[18px] text-white">
+                                                {{$itemAllSeller->tickets->count()}} Places
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="city.html" class="card">
-                                <div
-                                    class="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-ballon.png"
-                                        class="absolute w-full h-full object-cover" alt="thumbnail">
-                                    <div
-                                        class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
-                                        <div>
-                                            <h3 class="font-bold text-white">Turkey</h3>
-                                            <p class="text-sm leading-[18px] text-white">31,473 Places</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="city.html" class="card">
-                                <div
-                                    class="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-6.png"
-                                        class="absolute w-full h-full object-cover" alt="thumbnail">
-                                    <div
-                                        class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
-                                        <div>
-                                            <h3 class="font-bold text-white">Bogor</h3>
-                                            <p class="text-sm leading-[18px] text-white">31,473 Places</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="city.html" class="card">
-                                <div
-                                    class="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-7.png"
-                                        class="absolute w-full h-full object-cover" alt="thumbnail">
-                                    <div
-                                        class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
-                                        <div>
-                                            <h3 class="font-bold text-white">Bogor</h3>
-                                            <p class="text-sm leading-[18px] text-white">31,473 Places</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="city.html" class="card">
-                                <div
-                                    class="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-8.png"
-                                        class="absolute w-full h-full object-cover" alt="thumbnail">
-                                    <div
-                                        class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
-                                        <div>
-                                            <h3 class="font-bold text-white">Bogor</h3>
-                                            <p class="text-sm leading-[18px] text-white">31,473 Places</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        @empty
+                        <p>Seller tidak ditemukan!</p>
+                        @endforelse
                     </div>
                 </div>
             </section>
@@ -283,7 +225,7 @@
         <nav id="Bottom-Nav" class="fixed bottom-0 w-full max-w-[390px] bg-white px-4 py-5 z-30">
             <ul class="flex justify-evenly max-[400px]:justify-between">
                 <li class=" text-[#F97316]">
-                    <a href="index.html" class="menu">
+                    <a href="{{route('front.index')}}" class="menu">
                         <div class="group flex flex-col items-center text-center gap-[10px]">
                             <div class="w-6 h-6 flex shrink-0">
                                 <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
@@ -301,7 +243,7 @@
                     </a>
                 </li>
                 <li class=" text-[#13181D]">
-                    <a href="check-booking.html" class="menu">
+                    <a href="{{route('front.check_booking')}}" class="menu">
                         <div class="group flex flex-col items-center text-center gap-[10px]">
                             <div class="w-6 h-6 flex shrink-0">
                                 <svg width="17" height="21" viewBox="0 0 17 21" fill="none"

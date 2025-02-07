@@ -12,7 +12,7 @@ class TicketRepository implements TicketRepositoryInterface
         return Ticket::where('is_popular', true)->take($limit)->get();
     }
 
-    public function getAllNewTickets()
+    public function getAllNewTickets($limit)
     {
         return Ticket::latest()->get();
     }

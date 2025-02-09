@@ -40,4 +40,9 @@ class FrontController extends Controller
         // dd($seller);
         return view('front.city', compact('seller'));
     }
+
+    public function customerService()
+    {
+        return view('front.support');
+    }
 }

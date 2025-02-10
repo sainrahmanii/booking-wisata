@@ -6,7 +6,7 @@ interface TicketRepositoryInterface
 {
     public function getPopularTickets($limit);
 
-    public function getAllNewTickets();
+    public function getAllNewTickets($limit);
 
     public function find($id);
 

@@ -22,8 +22,13 @@ class Dashboard extends Page
     {
         return [
             StatsOverview::class,
+<<<<<<< HEAD
             // ChartSuccessTransaction::class,
             Category::class,
+=======
+            ChartSuccessTransaction::class,
+            StatsFailedTransaction::class,
+>>>>>>> a7e298284b69a8a81ab2cfc7a1a331898084f4b7
         ];
     }
 }

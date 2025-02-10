@@ -1,97 +1,141 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juara Ticket</title>
-  <link href="./output.css" rel="stylesheet">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juara Ticket</title>
+    <link href="./output.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+
 <body>
-    <div class="relative flex flex-col w-full min-h-screen max-w-[640px] mx-auto bg-white">
-        <div id="Top-Nav"  class="flex items-center justify-between w-full px-4 mt-[60px]">
+    <div class="relative flex flex-col w-full min-h-screen max-w-[390px] mx-auto bg-white">
+        <img src="assets/images/backgrounds/home-background.png"
+            class="bg-cover bg-center rounded-b-[30px] w-full h-[260px] absolute" alt="">
+        <div class="relative my-[40px] px-4">
             <a href="index.html">
-                <img src="assets/images/logos/logo.svg" class="flex shrink-0" alt="logo">
+                <svg width="140" height="26" viewBox="0 0 140 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_48_145)">
+                        <path
+                            d="M78.5765 18.7516H81.5711V7.58044H78.5765V18.7516ZM78.5765 5.83838H81.5711V3.1817H78.5765V5.83838Z"
+                            fill="white" />
+                        <path
+                            d="M83.501 22.41H86.4956V17.4885H86.5392C87.1776 18.4467 88.2128 19.0782 89.7978 19.0782C92.7044 19.0782 94.6862 16.7917 94.6862 13.1769C94.6862 9.69271 92.7705 7.27557 89.7759 7.27557C88.2347 7.27557 87.1776 7.99423 86.4513 8.97412H86.3851V7.58044H83.501V22.41ZM89.1594 16.6175C87.376 16.6175 86.4294 15.2892 86.4294 13.264C86.4294 11.2606 87.1776 9.67099 89.0496 9.67099C90.8991 9.67099 91.6473 11.1517 91.6473 13.264C91.6473 15.3763 90.6789 16.6175 89.1594 16.6175Z"
+                            fill="white" />
+                        <path
+                            d="M100.659 19.0782C103.478 19.0782 105.415 17.7281 105.415 15.4851C105.415 12.8721 103.324 12.3494 101.43 11.9575C99.8225 11.6308 98.3255 11.5437 98.3255 10.5856C98.3255 9.77985 99.0962 9.34434 100.263 9.34434C101.54 9.34434 102.311 9.77985 102.443 10.9775H105.151C104.931 8.73461 103.279 7.27557 100.307 7.27557C97.7308 7.27557 95.7053 8.42974 95.7053 10.8469C95.7053 13.2858 97.6872 13.8302 99.7127 14.2222C101.254 14.527 102.685 14.6359 102.685 15.7029C102.685 16.4869 101.937 16.9877 100.616 16.9877C99.2721 16.9877 98.3473 16.4215 98.1496 15.1368H95.3752C95.5512 17.5103 97.3789 19.0782 100.659 19.0782Z"
+                            fill="white" />
+                        <path
+                            d="M116.784 18.7516V7.58044H113.79V14.0262C113.79 15.5069 112.931 16.5522 111.522 16.5522C110.245 16.5522 109.651 15.8336 109.651 14.527V7.58044H106.678V15.0278C106.678 17.4668 108.087 19.0564 110.597 19.0564C112.183 19.0564 113.063 18.4685 113.834 17.445H113.9V18.7516H116.784Z"
+                            fill="white" />
+                        <path
+                            d="M118.721 18.7516H121.716V12.2623C121.716 10.7815 122.531 9.82342 123.742 9.82342C124.843 9.82342 125.481 10.4767 125.481 11.7397V18.7516H128.476V12.2623C128.476 10.7815 129.246 9.82342 130.501 9.82342C131.603 9.82342 132.241 10.4767 132.241 11.7397V18.7516H135.236V11.2388C135.236 8.7999 133.892 7.27557 131.514 7.27557C130.083 7.27557 128.894 8.01595 128.123 9.23541H128.079C127.529 8.05952 126.384 7.27557 124.953 7.27557C123.389 7.27557 122.289 8.05952 121.672 9.08298H121.606V7.58044H118.721V18.7516Z"
+                            fill="white" />
+                        <path d="M0.529297 18.7516H3.52379V3.1817H0.529297V18.7516Z" fill="white" />
+                        <path
+                            d="M10.8458 19.0782C14.3467 19.0782 16.7466 16.5087 16.7466 13.1769C16.7466 9.84514 14.3467 7.27557 10.8458 7.27557C7.34481 7.27557 4.94482 9.84514 4.94482 13.1769C4.94482 16.5087 7.34481 19.0782 10.8458 19.0782ZM10.8458 16.8135C8.99623 16.8135 7.98335 15.3545 7.98335 13.1769C7.98335 10.9993 8.99623 9.51855 10.8458 9.51855C12.6733 9.51855 13.7081 10.9993 13.7081 13.1769C13.7081 15.3545 12.6733 16.8135 10.8458 16.8135Z"
+                            fill="white" />
+                        <path
+                            d="M23.1147 22.5624C24.7881 22.5624 26.2414 22.1704 27.1881 21.2994C28.0248 20.5372 28.5313 19.4702 28.5313 17.9023V7.58044H25.6469V8.75639H25.6028C24.9202 7.82001 23.8854 7.27557 22.4762 7.27557C19.6138 7.27557 17.5881 9.40963 17.5881 12.7414C17.5881 16.1167 20.0542 18.0765 22.5643 18.0765C23.9954 18.0765 24.8542 17.5103 25.5147 16.77H25.5808V17.9894C25.5808 19.5137 24.7661 20.3195 23.0707 20.3195C21.6835 20.3195 21.045 19.775 20.8028 19.0782H17.8303C18.1386 21.2559 20.0322 22.5624 23.1147 22.5624ZM23.0707 15.7029C21.5294 15.7029 20.5166 14.5923 20.5166 12.6978C20.5166 10.8251 21.5294 9.6492 23.0486 9.6492C24.8542 9.6492 25.7349 11.0429 25.7349 12.6761C25.7349 14.331 24.9643 15.7029 23.0707 15.7029Z"
+                            fill="white" />
+                        <path
+                            d="M35.8099 19.0782C39.3108 19.0782 41.7108 16.5087 41.7108 13.1769C41.7108 9.84514 39.3108 7.27557 35.8099 7.27557C32.309 7.27557 29.9089 9.84514 29.9089 13.1769C29.9089 16.5087 32.309 19.0782 35.8099 19.0782ZM35.8099 16.8135C33.9603 16.8135 32.9475 15.3545 32.9475 13.1769C32.9475 10.9993 33.9603 9.51855 35.8099 9.51855C37.6374 9.51855 38.6723 10.9993 38.6723 13.1769C38.6723 15.3545 37.6374 16.8135 35.8099 16.8135Z"
+                            fill="white" />
+                        <path
+                            d="M136.323 5.74645C136.323 5.24534 136.734 4.83911 137.241 4.83911H139.076C139.583 4.83911 139.994 5.24534 139.994 5.74645C139.994 6.24756 139.583 6.65379 139.076 6.65379H137.241C136.734 6.65379 136.323 6.24756 136.323 5.74645Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M59.871 -3.05176e-05C66.9643 -3.05176e-05 72.7152 5.68717 72.7152 12.7027C72.7152 19.7182 66.9643 25.4054 59.871 25.4054C52.7774 25.4054 47.027 19.7182 47.027 12.7027C47.027 5.68717 52.7774 -3.05176e-05 59.871 -3.05176e-05ZM59.4068 0.950506C57.9415 1.15445 56.5462 2.3189 55.4631 4.26643C55.149 4.83133 54.8655 5.45544 54.6185 6.1293C56.0912 5.76329 57.709 5.54751 59.4068 5.51413V0.950506ZM53.5329 6.4344C53.8402 5.48092 54.2159 4.60368 54.6496 3.8239C55.1865 2.85845 55.8237 2.02475 56.5416 1.38442C52.6377 2.50572 49.5606 5.54901 48.4268 9.40994C49.0743 8.69992 49.9172 8.06974 50.8934 7.53877C51.6819 7.10986 52.5689 6.73818 53.5329 6.4344ZM53.2245 7.50797C52.8544 8.96446 52.6362 10.5644 52.6024 12.2435H47.988C48.1942 10.7943 49.3717 9.41445 51.3409 8.34336C51.9121 8.03265 52.5431 7.7523 53.2245 7.50797ZM53.5311 12.2435C53.5695 10.4111 53.8362 8.69078 54.2776 7.17077C55.8145 6.73431 57.554 6.47047 59.4068 6.43255V8.41602C58.7156 10.1661 57.3058 11.5602 55.5362 12.2435H53.5311ZM52.6024 13.1618H47.988C48.1942 14.611 49.3717 15.9908 51.3409 17.062C51.9121 17.3727 52.5431 17.653 53.2245 17.8974C52.8544 16.4409 52.6362 14.8409 52.6024 13.1618ZM54.2776 18.2346C53.8362 16.7146 53.5695 14.9942 53.5311 13.1618H55.5362C57.3058 13.8452 58.7156 15.2393 59.4068 16.9893V18.9728C57.554 18.9349 55.8145 18.671 54.2776 18.2346ZM53.5329 18.9709C52.5689 18.6672 51.6819 18.2955 50.8934 17.8666C49.9172 17.3356 49.0743 16.7054 48.4268 15.9954C49.5606 19.8563 52.6377 22.8996 56.5416 24.0209C55.8237 23.3806 55.1865 22.5469 54.6496 21.5814C54.2159 20.8017 53.8402 19.9244 53.5329 18.9709ZM59.4068 24.4548C57.9415 24.2509 56.5462 23.0864 55.4631 21.1389C55.149 20.574 54.8655 19.9499 54.6185 19.2761C56.0912 19.642 57.709 19.8578 59.4068 19.8912V24.4548ZM63.2004 24.0209C63.9183 23.3806 64.5554 22.5469 65.0923 21.5814C65.5258 20.8017 65.9021 19.9244 66.2091 18.9709C67.173 18.6672 68.0599 18.2955 68.8485 17.8666C69.8247 17.3356 70.6679 16.7054 71.3152 15.9954C70.1811 19.8563 67.1043 22.8996 63.2004 24.0209ZM65.1238 19.2761C64.8765 19.9499 64.5927 20.574 64.2786 21.1389C63.1958 23.0864 61.8005 24.2509 60.3352 24.4548V19.8912C62.033 19.8578 63.6508 19.642 65.1238 19.2761ZM66.5174 17.8974C67.1987 17.653 67.83 17.3727 68.4009 17.062C70.3706 15.9909 71.5477 14.611 71.7539 13.1618H67.1396C67.1056 14.8409 66.8873 16.4409 66.5174 17.8974ZM66.211 13.1618C66.1725 14.9942 65.906 16.7146 65.4641 18.2346C63.9275 18.671 62.188 18.9349 60.3352 18.9728V16.9908C61.0262 15.2401 62.4363 13.8453 64.2063 13.1618H66.211ZM67.1396 12.2435H71.7539C71.5477 10.7943 70.3706 9.41445 68.4009 8.34336C67.83 8.03265 67.1987 7.7523 66.5174 7.50797C66.8873 8.96446 67.1056 10.5644 67.1396 12.2435ZM65.4641 7.17077C65.906 8.69078 66.1725 10.4111 66.211 12.2435H64.2064C62.4363 11.56 61.0262 10.1652 60.3352 8.41456V6.43255C62.188 6.47047 63.9275 6.73431 65.4641 7.17077ZM66.2091 6.4344C67.173 6.73818 68.0599 7.10986 68.8485 7.53877C69.8247 8.06974 70.6679 8.69992 71.3152 9.40994C70.1811 5.54901 67.1043 2.50572 63.2004 1.38442C63.9183 2.02475 64.5554 2.85845 65.0923 3.8239C65.5258 4.60368 65.9021 5.48092 66.2091 6.4344ZM60.3352 0.950506C61.8005 1.15445 63.1958 2.3189 64.2786 4.26643C64.5927 4.83134 64.8765 5.45544 65.1238 6.1293C63.6508 5.76329 62.033 5.54751 60.3352 5.51413V0.950506Z"
+                            fill="#FA7500" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_48_145">
+                            <rect width="140" height="25.4054" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
             </a>
-            <a href="#">
-                <img src="assets/images/icons/heart-fill.svg" class="w-12 h-12" alt="icon">
-            </a>
+            <div class="flex content-center justify-between mt-[16px]">
+                <h3 class="text-white text-sm">Let's <br><span class="text-2xl">Explore</span>
+                </h3>
+                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_b_16_319)">
+                        <rect x="1" y="0.905396" width="40" height="40" rx="20" fill="white" fill-opacity="0.1" />
+                        <rect x="1" y="0.905396" width="40" height="40" rx="20" stroke="white" />
+                        <path
+                            d="M29.7938 25.3998C29.2735 24.5035 28.5 21.9676 28.5 18.6554C28.5 16.6663 27.7098 14.7586 26.3033 13.3521C24.8968 11.9456 22.9891 11.1554 21 11.1554C19.0109 11.1554 17.1032 11.9456 15.6967 13.3521C14.2902 14.7586 13.5 16.6663 13.5 18.6554C13.5 21.9685 12.7256 24.5035 12.2053 25.3998C12.0725 25.6276 12.002 25.8865 12.0011 26.1502C12.0002 26.414 12.0689 26.6733 12.2002 26.9021C12.3315 27.1309 12.5208 27.321 12.749 27.4532C12.9772 27.5855 13.2362 27.6552 13.5 27.6554H17.3259C17.499 28.5021 17.9592 29.2631 18.6286 29.8096C19.2981 30.3561 20.1358 30.6546 21 30.6546C21.8642 30.6546 22.7019 30.3561 23.3714 29.8096C24.0409 29.2631 24.501 28.5021 24.6741 27.6554H28.5C28.7637 27.655 29.0226 27.5852 29.2507 27.4529C29.4788 27.3205 29.668 27.1304 29.7992 26.9017C29.9303 26.673 29.9989 26.4137 29.998 26.15C29.997 25.8863 29.9266 25.6276 29.7938 25.3998ZM21 29.1554C20.5348 29.1553 20.0812 29.0109 19.7014 28.7423C19.3216 28.4737 19.0344 28.094 18.8794 27.6554H23.1206C22.9656 28.094 22.6784 28.4737 22.2986 28.7423C21.9189 29.0109 21.4652 29.1553 21 29.1554ZM13.5 26.1554C14.2219 24.9141 15 22.0379 15 18.6554C15 17.0641 15.6322 15.538 16.7574 14.4128C17.8826 13.2875 19.4087 12.6554 21 12.6554C22.5913 12.6554 24.1174 13.2875 25.2427 14.4128C26.3679 15.538 27 17.0641 27 18.6554C27 22.0351 27.7763 24.9113 28.5 26.1554H13.5Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_b_16_319" x="-9.5" y="-9.5946" width="61" height="61"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_16_319" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_16_319"
+                                result="shape" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+            <div class="w-full p-1 gap-1 mt-7 flex content-center rounded-full bg-[#94959966] backdrop-blur-sm">
+                <div class="w-full max-w-sm min-w-[200px] bg-white rounded-full content-center">
+                    <div class="relative flex content-center px-4 py-12">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.5306 18.8748L14.8365 14.1816C16.1971 12.5482 16.8755 10.4532 16.7307 8.33233C16.5859 6.21147 15.629 4.22807 14.0591 2.79474C12.4892 1.36142 10.4271 0.588509 8.30188 0.636809C6.17663 0.685109 4.15181 1.5509 2.64864 3.05407C1.14547 4.55724 0.279683 6.58205 0.231383 8.70731C0.183083 10.8326 0.955989 12.8946 2.38932 14.4645C3.82265 16.0344 5.80604 16.9913 7.92691 17.1361C10.0478 17.2809 12.1428 16.6025 13.7762 15.242L18.4693 19.936C18.539 20.0057 18.6218 20.061 18.7128 20.0987C18.8038 20.1364 18.9014 20.1558 19 20.1558C19.0985 20.1558 19.1961 20.1364 19.2871 20.0987C19.3782 20.061 19.4609 20.0057 19.5306 19.936C19.6003 19.8663 19.6556 19.7836 19.6933 19.6926C19.731 19.6015 19.7504 19.5039 19.7504 19.4054C19.7504 19.3069 19.731 19.2093 19.6933 19.1182C19.6556 19.0272 19.6003 18.9445 19.5306 18.8748ZM1.74997 8.9054C1.74997 7.57037 2.14585 6.26533 2.88755 5.1553C3.62925 4.04526 4.68346 3.1801 5.91686 2.66921C7.15026 2.15832 8.50746 2.02465 9.81683 2.2851C11.1262 2.54555 12.3289 3.18842 13.2729 4.13243C14.2169 5.07643 14.8598 6.27916 15.1203 7.58854C15.3807 8.89791 15.2471 10.2551 14.7362 11.4885C14.2253 12.7219 13.3601 13.7761 12.2501 14.5178C11.14 15.2595 9.83499 15.6554 8.49997 15.6554C6.71037 15.6534 4.99463 14.9416 3.72919 13.6762C2.46375 12.4107 1.75196 10.695 1.74997 8.9054Z"
+                                fill="#3F3F3F" />
+                        </svg>
+                        <input
+                            class="w-full bg-white pl-5 placeholder:text-slate-400 text-slate-700 text-sm focus:outline-none transition duration-300 ease shadow-sm"
+                            placeholder="Where can we take you?" />
+                    </div>
+                </div>
+                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0.405396" width="40" height="40" rx="20" fill="white" />
+                    <path
+                        d="M14.003 18.2491V12.1554C14.003 11.9565 13.9239 11.7657 13.7833 11.6251C13.6426 11.4844 13.4519 11.4054 13.253 11.4054C13.054 11.4054 12.8633 11.4844 12.7226 11.6251C12.582 11.7657 12.503 11.9565 12.503 12.1554V18.2491C11.8576 18.4144 11.2857 18.7897 10.8772 19.3159C10.4688 19.8421 10.2471 20.4893 10.2471 21.1554C10.2471 21.8215 10.4688 22.4687 10.8772 22.9949C11.2857 23.5211 11.8576 23.8964 12.503 24.0616V28.6554C12.503 28.8543 12.582 29.0451 12.7226 29.1857C12.8633 29.3264 13.054 29.4054 13.253 29.4054C13.4519 29.4054 13.6426 29.3264 13.7833 29.1857C13.9239 29.0451 14.003 28.8543 14.003 28.6554V24.0616C14.6483 23.8964 15.2202 23.5211 15.6287 22.9949C16.0371 22.4687 16.2588 21.8215 16.2588 21.1554C16.2588 20.4893 16.0371 19.8421 15.6287 19.3159C15.2202 18.7897 14.6483 18.4144 14.003 18.2491ZM13.253 22.6554C12.9563 22.6554 12.6663 22.5674 12.4196 22.4026C12.1729 22.2378 11.9807 22.0035 11.8671 21.7294C11.7536 21.4553 11.7239 21.1537 11.7818 20.8628C11.8397 20.5718 11.9825 20.3045 12.1923 20.0947C12.4021 19.885 12.6693 19.7421 12.9603 19.6842C13.2513 19.6263 13.5529 19.656 13.827 19.7696C14.1011 19.8831 14.3353 20.0754 14.5002 20.322C14.665 20.5687 14.753 20.8587 14.753 21.1554C14.753 21.5532 14.5949 21.9348 14.3136 22.2161C14.0323 22.4974 13.6508 22.6554 13.253 22.6554ZM20.753 13.7491V12.1554C20.753 11.9565 20.6739 11.7657 20.5333 11.6251C20.3926 11.4844 20.2019 11.4054 20.003 11.4054C19.804 11.4054 19.6133 11.4844 19.4726 11.6251C19.332 11.7657 19.253 11.9565 19.253 12.1554V13.7491C18.6076 13.9144 18.0357 14.2897 17.6272 14.8159C17.2188 15.3421 16.9971 15.9893 16.9971 16.6554C16.9971 17.3215 17.2188 17.9687 17.6272 18.4949C18.0357 19.0211 18.6076 19.3964 19.253 19.5616V28.6554C19.253 28.8543 19.332 29.0451 19.4726 29.1857C19.6133 29.3264 19.804 29.4054 20.003 29.4054C20.2019 29.4054 20.3926 29.3264 20.5333 29.1857C20.6739 29.0451 20.753 28.8543 20.753 28.6554V19.5616C21.3983 19.3964 21.9702 19.0211 22.3787 18.4949C22.7871 17.9687 23.0088 17.3215 23.0088 16.6554C23.0088 15.9893 22.7871 15.3421 22.3787 14.8159C21.9702 14.2897 21.3983 13.9144 20.753 13.7491ZM20.003 18.1554C19.7063 18.1554 19.4163 18.0674 19.1696 17.9026C18.9229 17.7378 18.7307 17.5035 18.6171 17.2294C18.5036 16.9553 18.4739 16.6537 18.5318 16.3628C18.5897 16.0718 18.7325 15.8045 18.9423 15.5947C19.1521 15.385 19.4193 15.2421 19.7103 15.1842C20.0013 15.1263 20.3029 15.156 20.577 15.2696C20.8511 15.3831 21.0853 15.5754 21.2502 15.822C21.415 16.0687 21.503 16.3587 21.503 16.6554C21.503 17.0532 21.3449 17.4348 21.0636 17.7161C20.7823 17.9974 20.4008 18.1554 20.003 18.1554ZM29.753 24.1554C29.7523 23.4903 29.5311 22.8442 29.1239 22.3183C28.7168 21.7924 28.1467 21.4164 27.503 21.2491V12.1554C27.503 11.9565 27.4239 11.7657 27.2833 11.6251C27.1426 11.4844 26.9519 11.4054 26.753 11.4054C26.554 11.4054 26.3633 11.4844 26.2226 11.6251C26.082 11.7657 26.003 11.9565 26.003 12.1554V21.2491C25.3576 21.4144 24.7857 21.7897 24.3772 22.3159C23.9688 22.8421 23.7471 23.4893 23.7471 24.1554C23.7471 24.8215 23.9688 25.4687 24.3772 25.9949C24.7857 26.5211 25.3576 26.8964 26.003 27.0616V28.6554C26.003 28.8543 26.082 29.0451 26.2226 29.1857C26.3633 29.3264 26.554 29.4054 26.753 29.4054C26.9519 29.4054 27.1426 29.3264 27.2833 29.1857C27.4239 29.0451 27.503 28.8543 27.503 28.6554V27.0616C28.1467 26.8944 28.7168 26.5184 29.1239 25.9925C29.5311 25.4666 29.7523 24.8205 29.753 24.1554ZM26.753 25.6554C26.4563 25.6554 26.1663 25.5674 25.9196 25.4026C25.6729 25.2378 25.4807 25.0035 25.3671 24.7294C25.2536 24.4553 25.2239 24.1537 25.2818 23.8628C25.3397 23.5718 25.4825 23.3045 25.6923 23.0947C25.9021 22.885 26.1693 22.7421 26.4603 22.6842C26.7513 22.6263 27.0529 22.656 27.327 22.7696C27.6011 22.8831 27.8353 23.0754 28.0002 23.322C28.165 23.5687 28.253 23.8587 28.253 24.1554C28.253 24.5532 28.0949 24.9348 27.8136 25.2161C27.5323 25.4974 27.1508 25.6554 26.753 25.6554Z"
+                        fill="#3F3F3F" />
+                </svg>
+            </div>
         </div>
         <main class="flex flex-col w-full gap-5 mt-5 overflow-x-hidden">
             <section id="Popular" class="flex flex-col gap-3">
                 <h2 class="px-4 font-bold">Popular This Year</h2>
                 <div class="swiper-popular w-full overflow-hidden">
                     <div class="swiper-wrapper">
+                        @forelse($popularTickets as $itemPopularTickets)
                         <div class="swiper-slide !w-fit">
-                            <a href="details.html" class="card">
-                                <div class="relative flex items-end w-[345px] h-[220px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-1.png" class="absolute w-full h-full object-cover" alt="thumbnail">
-                                    <div class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-4 mb-4 bg-[#94959966] backdrop-blur-sm">
+                            <a href="{{route('front.details', $itemPopularTickets->slug)}}" class="card">
+                                <div
+                                    class="relative flex items-end w-[345px] h-[220px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
+                                    <img src="{{Storage::url($itemPopularTickets->thumbnail)}}"
+                                        class="absolute w-full h-full object-cover" alt="thumbnail">
+                                    <div
+                                        class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-4 mb-4 bg-[#94959966] backdrop-blur-sm">
                                         <div>
-                                            <h3 class="font-bold text-white">Angga Tower</h3>
-                                            <p class="text-sm leading-[18px] text-white">Landmark</p>
+                                            <h3 class="font-bold text-white">{{$itemPopularTickets->name}}</h3>
+                                            <p class="text-sm leading-[18px] text-white">
+                                                {{$itemPopularTickets->category->name}}
+                                            </p>
                                         </div>
-                                        <p class="w-fit flex shrink-0 items-center gap-[2px] rounded-full p-[6px_8px] bg-white">
-                                            <img src="assets/images/icons/Star 1.svg" class="w-4 h-4" alt="star">
+                                        <p
+                                            class="w-fit flex shrink-0 items-center gap-[2px] rounded-full p-[6px_8px] bg-white">
+                                            <img src="{{asset('assets/images/icons/Star 1.svg')}}" class="w-4 h-4"
+                                                alt="star">
                                             <span class="font-semibold text-xs leading-[18px]">4/5</span>
                                         </p>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="details.html" class="card">
-                                <div class="relative flex items-end w-[345px] h-[220px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-2.png" class="absolute w-full h-full object-cover" alt="thumbnail">
-                                    <div class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-4 mb-4 bg-[#94959966] backdrop-blur-sm">
-                                        <div>
-                                            <h3 class="font-bold text-white">Angga Tower</h3>
-                                            <p class="text-sm leading-[18px] text-white">Landmark</p>
-                                        </div>
-                                        <p class="w-fit flex shrink-0 items-center gap-[2px] rounded-full p-[6px_8px] bg-white">
-                                            <img src="assets/images/icons/Star 1.svg" class="w-4 h-4" alt="star">
-                                            <span class="font-semibold text-xs leading-[18px]">4/5</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="details.html" class="card">
-                                <div class="relative flex items-end w-[345px] h-[220px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-3.png" class="absolute w-full h-full object-cover" alt="thumbnail">
-                                    <div class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-4 mb-4 bg-[#94959966] backdrop-blur-sm">
-                                        <div>
-                                            <h3 class="font-bold text-white">Angga Tower</h3>
-                                            <p class="text-sm leading-[18px] text-white">Landmark</p>
-                                        </div>
-                                        <p class="w-fit flex shrink-0 items-center gap-[2px] rounded-full p-[6px_8px] bg-white">
-                                            <img src="assets/images/icons/Star 1.svg" class="w-4 h-4" alt="star">
-                                            <span class="font-semibold text-xs leading-[18px]">4/5</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="details.html" class="card">
-                                <div class="relative flex items-end w-[345px] h-[220px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-4.png" class="absolute w-full h-full object-cover" alt="thumbnail">
-                                    <div class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-4 mb-4 bg-[#94959966] backdrop-blur-sm">
-                                        <div>
-                                            <h3 class="font-bold text-white">Angga Tower</h3>
-                                            <p class="text-sm leading-[18px] text-white">Landmark</p>
-                                        </div>
-                                        <p class="w-fit flex shrink-0 items-center gap-[2px] rounded-full p-[6px_8px] bg-white">
-                                            <img src="assets/images/icons/Star 1.svg" class="w-4 h-4" alt="star">
-                                            <span class="font-semibold text-xs leading-[18px]">4/5</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        @empty
+                        <p>Belum ada data tersedia!</p>
+                        @endforelse
                     </div>
                 </div>
             </section>
@@ -99,46 +143,16 @@
                 <h2 class="px-4 font-bold">By Categories</h2>
                 <div class="swiper-categories w-full overflow-hidden">
                     <div class="swiper-wrapper">
+                        @forelse($categories as $itemCategories)
                         <div class="swiper-slide !w-fit">
-                            <a href="category.html" class="card">
-                                <div class="flex items-center w-fit rounded-full text-nowrap p-[14px_20px] gap-[10px] bg-[#F8F8F9]">
-                                    <img src="assets/images/icons/courthouse.svg" class="w-6 h-6" alt="icon">
-                                    <p class="font-bold text-sm leading-[21px]">Landmarks</p>
-                                </div>
+                            <a href="{{route('front.category', $itemCategories->slug)}}" class="card">
+                                <img src="{{Storage::url($itemCategories->icon)}}" class="w-24 h-24 rounded-[20px]"
+                                    alt="icon">
                             </a>
                         </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="category.html" class="card">
-                                <div class="flex items-center w-fit rounded-full text-nowrap p-[14px_20px] gap-[10px] bg-[#F8F8F9]">
-                                    <img src="assets/images/icons/pet.svg" class="w-6 h-6" alt="icon">
-                                    <p class="font-bold text-sm leading-[21px]">Wild Parks</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="category.html" class="card">
-                                <div class="flex items-center w-fit rounded-full text-nowrap p-[14px_20px] gap-[10px] bg-[#F8F8F9]">
-                                    <img src="assets/images/icons/microscope.svg" class="w-6 h-6" alt="icon">
-                                    <p class="font-bold text-sm leading-[21px]">Open Space</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="category.html" class="card">
-                                <div class="flex items-center w-fit rounded-full text-nowrap p-[14px_20px] gap-[10px] bg-[#F8F8F9]">
-                                    <img src="assets/images/icons/sun-fog.svg" class="w-6 h-6" alt="icon">
-                                    <p class="font-bold text-sm leading-[21px]">Beaches</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="category.html" class="card">
-                                <div class="flex items-center w-fit rounded-full text-nowrap p-[14px_20px] gap-[10px] bg-[#F8F8F9]">
-                                    <img src="assets/images/icons/building-4.svg" class="w-6 h-6" alt="icon">
-                                    <p class="font-bold text-sm leading-[21px]">City Cards</p>
-                                </div>
-                            </a>
-                        </div>
+                        @empty
+                        <p>Tidak ada kategori tersedia!</p>
+                        @endforelse
                     </div>
                 </div>
             </section>
@@ -146,228 +160,121 @@
                 <h2 class="px-4 font-bold">You Should Visit</h2>
                 <div class="swiper-visit w-full overflow-hidden">
                     <div class="swiper-wrapper">
+                        @forelse($sellers as $itemAllSeller)
                         <div class="swiper-slide !w-fit">
-                            <a href="city.html" class="card">
-                                <div class="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-4.png" class="absolute w-full h-full object-cover" alt="thumbnail">
-                                    <div class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
+                            <a href="{{route('front.seller', $itemAllSeller->slug)}}" class="card">
+                                <div
+                                    class="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
+                                    <img src="{{Storage::url($itemAllSeller->photo)}}"
+                                        class="absolute w-full h-full object-cover" alt="thumbnail">
+                                    <div
+                                        class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
                                         <div>
-                                            <h3 class="font-bold text-white">Bogor</h3>
-                                            <p class="text-sm leading-[18px] text-white">31,473 Places</p>
+                                            <h3 class="font-bold text-white">{{$itemAllSeller->name}}</h3>
+                                            <p class="text-sm leading-[18px] text-white">
+                                                {{$itemAllSeller->tickets->count()}} Places
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="city.html" class="card">
-                                <div class="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-ballon.png" class="absolute w-full h-full object-cover" alt="thumbnail">
-                                    <div class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
-                                        <div>
-                                            <h3 class="font-bold text-white">Turkey</h3>
-                                            <p class="text-sm leading-[18px] text-white">31,473 Places</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="city.html" class="card">
-                                <div class="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-6.png" class="absolute w-full h-full object-cover" alt="thumbnail">
-                                    <div class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
-                                        <div>
-                                            <h3 class="font-bold text-white">Bogor</h3>
-                                            <p class="text-sm leading-[18px] text-white">31,473 Places</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="city.html" class="card">
-                                <div class="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-7.png" class="absolute w-full h-full object-cover" alt="thumbnail">
-                                    <div class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
-                                        <div>
-                                            <h3 class="font-bold text-white">Bogor</h3>
-                                            <p class="text-sm leading-[18px] text-white">31,473 Places</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide !w-fit">
-                            <a href="city.html" class="card">
-                                <div class="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-8.png" class="absolute w-full h-full object-cover" alt="thumbnail">
-                                    <div class="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
-                                        <div>
-                                            <h3 class="font-bold text-white">Bogor</h3>
-                                            <p class="text-sm leading-[18px] text-white">31,473 Places</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        @empty
+                        <p>Seller tidak ditemukan!</p>
+                        @endforelse
                     </div>
                 </div>
             </section>
             <section id="Available" class="flex flex-col gap-3 px-4 py-5 bg-[#F8F8F9] mb-[94px]">
                 <h2 class="font-bold">Now Available</h2>
                 <div class="flex flex-col gap-3">
-                    <a href="details.html" class="card">
-                        <div class="flex items-center justify-between rounded-3xl p-[6px] pr-[14px] bg-white overflow-hidden">
+                    @forelse($newTickets as $itemTicket)
+                    <a href="{{route('front.details', $itemTicket->slug)}}" class="card">
+                        <div
+                            class="flex items-center justify-between rounded-3xl p-[6px] pr-[14px] bg-white overflow-hidden">
                             <div class="flex items-center gap-[14px]">
                                 <div class="flex w-[90px] h-[90px] shrink-0 rounded-3xl bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-7.png" class="w-full h-full object-cover" alt="thumbnail">
+                                    <img src="{{Storage::url($itemTicket->thumbnail)}}"
+                                        class="w-full h-full object-cover" alt="thumbnail">
                                 </div>
                                 <div class="flex flex-col gap-[6px]">
-                                    <h3 class="font-semibold">Bun JS Tower</h3>
+                                    <h3 class="font-semibold">{{$itemTicket->name}}</h3>
                                     <div class="flex items-center gap-1">
-                                        <img src="assets/images/icons/location.svg" class="w-[18px] h-[18px]" alt="icon">
-                                        <p class="font-semibold text-xs leading-[18px]">Shanghai</p>
+                                        <img src="{{asset('assets/images/icons/location.svg')}}"
+                                            class="w-[18px] h-[18px]" alt="icon">
+                                        <p class="font-semibold text-xs leading-[18px]">{{$itemTicket->seller->name}}
+                                        </p>
                                     </div>
-                                    <p class="font-bold text-sm leading-[21px] text-[#F97316]">Rp 889.000</p>
+                                    <p class="font-bold text-sm leading-[21px] text-[#F97316]">Rp
+                                        {{number_format($itemTicket->price, 0, '.', '.')}}
+                                    </p>
                                 </div>
                             </div>
                             <p class="w-fit flex shrink-0 items-center gap-[2px] rounded-full p-[6px_8px] bg-[#FFE5D3]">
-                                <img src="assets/images/icons/Star 1.svg" class="w-4 h-4" alt="star">
+                                <img src="{{asset('assets/images/icons/Star 1.svg')}}" class="w-4 h-4" alt="star">
                                 <span class="font-semibold text-xs leading-[18px] text-[#F97316]">4/5</span>
                             </p>
                         </div>
                     </a>
-                    <a href="details.html" class="card">
-                        <div class="flex items-center justify-between rounded-3xl p-[6px] pr-[14px] bg-white overflow-hidden">
-                            <div class="flex items-center gap-[14px]">
-                                <div class="flex w-[90px] h-[90px] shrink-0 rounded-3xl bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-6.png" class="w-full h-full object-cover" alt="thumbnail">
-                                </div>
-                                <div class="flex flex-col gap-[6px]">
-                                    <h3 class="font-semibold">Jewel Fun Park</h3>
-                                    <div class="flex items-center gap-1">
-                                        <img src="assets/images/icons/location.svg" class="w-[18px] h-[18px]" alt="icon">
-                                        <p class="font-semibold text-xs leading-[18px]">Singapore</p>
-                                    </div>
-                                    <p class="font-bold text-sm leading-[21px] text-[#F97316]">Rp 564.000.000</p>
-                                </div>
-                            </div>
-                            <p class="w-fit flex shrink-0 items-center gap-[2px] rounded-full p-[6px_8px] bg-[#FFE5D3]">
-                                <img src="assets/images/icons/Star 1.svg" class="w-4 h-4" alt="star">
-                                <span class="font-semibold text-xs leading-[18px] text-[#F97316]">4/5</span>
-                            </p>
-                        </div>
-                    </a>
-                    <a href="details.html" class="card">
-                        <div class="flex items-center justify-between rounded-3xl p-[6px] pr-[14px] bg-white overflow-hidden">
-                            <div class="flex items-center gap-[14px]">
-                                <div class="flex w-[90px] h-[90px] shrink-0 rounded-3xl bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-2.png" class="w-full h-full object-cover" alt="thumbnail">
-                                </div>
-                                <div class="flex flex-col gap-[6px]">
-                                    <h3 class="font-semibold">London Trip</h3>
-                                    <div class="flex items-center gap-1">
-                                        <img src="assets/images/icons/location.svg" class="w-[18px] h-[18px]" alt="icon">
-                                        <p class="font-semibold text-xs leading-[18px]">London</p>
-                                    </div>
-                                    <p class="font-bold text-sm leading-[21px] text-[#F97316]">Rp 12.250.000</p>
-                                </div>
-                            </div>
-                            <p class="w-fit flex shrink-0 items-center gap-[2px] rounded-full p-[6px_8px] bg-[#FFE5D3]">
-                                <img src="assets/images/icons/Star 1.svg" class="w-4 h-4" alt="star">
-                                <span class="font-semibold text-xs leading-[18px] text-[#F97316]">4/5</span>
-                            </p>
-                        </div>
-                    </a>
-                    <a href="details.html" class="card">
-                        <div class="flex items-center justify-between rounded-3xl p-[6px] pr-[14px] bg-white overflow-hidden">
-                            <div class="flex items-center gap-[14px]">
-                                <div class="flex w-[90px] h-[90px] shrink-0 rounded-3xl bg-[#D9D9D9] overflow-hidden">
-                                    <img src="assets/images/thumbnails/thumbnail-8.png" class="w-full h-full object-cover" alt="thumbnail">
-                                </div>
-                                <div class="flex flex-col gap-[6px]">
-                                    <h3 class="font-semibold">Alami Surfing</h3>
-                                    <div class="flex items-center gap-1">
-                                        <img src="assets/images/icons/location.svg" class="w-[18px] h-[18px]" alt="icon">
-                                        <p class="font-semibold text-xs leading-[18px]">Indonesia</p>
-                                    </div>
-                                    <p class="font-bold text-sm leading-[21px] text-[#F97316]">Rp 3.690.000</p>
-                                </div>
-                            </div>
-                            <p class="w-fit flex shrink-0 items-center gap-[2px] rounded-full p-[6px_8px] bg-[#FFE5D3]">
-                                <img src="assets/images/icons/Star 1.svg" class="w-4 h-4" alt="star">
-                                <span class="font-semibold text-xs leading-[18px] text-[#F97316]">4/5</span>
-                            </p>
-                        </div>
-                    </a>
+                    @empty
+                    <p>Tiket belum tersedia</p>
+                    @endforelse
                 </div>
             </section>
         </main>
-        <nav id="Bottom-Nav" class="fixed bottom-0 w-full max-w-[640px] bg-white px-4 py-5 z-30">
+        <nav id="Bottom-Nav" class="fixed bottom-0 w-full max-w-[390px] bg-white px-4 py-5 z-30">
             <ul class="flex justify-evenly max-[400px]:justify-between">
                 <li class=" text-[#F97316]">
-                    <a href="index.html" class="menu">
+                    <a href="{{route('front.index')}}" class="menu">
                         <div class="group flex flex-col items-center text-center gap-[10px]">
                             <div class="w-6 h-6 flex shrink-0">
-                                <svg class="transition-all duration-300 group-hover:fill-[#F97316]  fill-current" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.4" d="M7.65 20.91C7.62 20.91 7.58 20.93 7.55 20.93C5.61 19.97 4.03 18.38 3.06 16.44C3.06 16.41 3.08 16.37 3.08 16.34C4.3 16.7 5.56 16.97 6.81 17.18C7.03 18.44 7.29 19.69 7.65 20.91Z"/>
-                                    <path opacity="0.4" d="M20.94 16.45C19.95 18.44 18.3 20.05 16.29 21.02C16.67 19.75 16.99 18.47 17.2 17.18C18.46 16.97 19.7 16.7 20.92 16.34C20.91 16.38 20.94 16.42 20.94 16.45Z"/>
-                                    <path opacity="0.4" d="M21.02 7.70998C19.76 7.32998 18.49 7.01998 17.2 6.79998C16.99 5.50998 16.68 4.22998 16.29 2.97998C18.36 3.96998 20.03 5.63998 21.02 7.70998Z"/>
-                                    <path opacity="0.4" d="M7.64998 3.09C7.28998 4.31 7.02998 5.55 6.81998 6.81C5.52998 7.01 4.24998 7.33 2.97998 7.71C3.94998 5.7 5.55998 4.05 7.54998 3.06C7.57998 3.06 7.61998 3.09 7.64998 3.09Z"/>
-                                    <path d="M15.49 6.59C13.17 6.33 10.83 6.33 8.51001 6.59C8.76001 5.22 9.08001 3.85 9.53001 2.53C9.55001 2.45 9.54001 2.39 9.55001 2.31C10.34 2.12 11.15 2 12 2C12.84 2 13.66 2.12 14.44 2.31C14.45 2.39 14.45 2.45 14.47 2.53C14.92 3.86 15.24 5.22 15.49 6.59Z"/>
-                                    <path d="M6.59 15.49C5.21 15.24 3.85 14.92 2.53 14.47C2.45 14.45 2.39 14.46 2.31 14.45C2.12 13.66 2 12.85 2 12C2 11.16 2.12 10.34 2.31 9.56001C2.39 9.55001 2.45 9.55001 2.53 9.53001C3.86 9.09001 5.21 8.76001 6.59 8.51001C6.34 10.83 6.34 13.17 6.59 15.49Z"/>
-                                    <path d="M22 12C22 12.85 21.88 13.66 21.69 14.45C21.61 14.46 21.55 14.45 21.47 14.47C20.14 14.91 18.78 15.24 17.41 15.49C17.67 13.17 17.67 10.83 17.41 8.51001C18.78 8.76001 20.15 9.08001 21.47 9.53001C21.55 9.55001 21.61 9.56001 21.69 9.56001C21.88 10.35 22 11.16 22 12Z"/>
-                                    <path d="M15.49 17.41C15.24 18.79 14.92 20.15 14.47 21.47C14.45 21.55 14.45 21.61 14.44 21.69C13.66 21.88 12.84 22 12 22C11.15 22 10.34 21.88 9.55001 21.69C9.54001 21.61 9.55001 21.55 9.53001 21.47C9.09001 20.14 8.76001 18.79 8.51001 17.41C9.67001 17.54 10.83 17.63 12 17.63C13.17 17.63 14.34 17.54 15.49 17.41Z"/>
-                                    <path d="M15.7633 15.7633C13.2622 16.0789 10.7378 16.0789 8.23667 15.7633C7.92111 13.2622 7.92111 10.7378 8.23667 8.23667C10.7378 7.92111 13.2622 7.92111 15.7633 8.23667C16.0789 10.7378 16.0789 13.2622 15.7633 15.7633Z"/>
+                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 9.25001V18.25C18 18.4489 17.921 18.6397 17.7803 18.7803C17.6397 18.921 17.4489 19 17.25 19H12C11.8011 19 11.6103 18.921 11.4697 18.7803C11.329 18.6397 11.25 18.4489 11.25 18.25V13.375C11.25 13.2756 11.2105 13.1802 11.1402 13.1098C11.0698 13.0395 10.9745 13 10.875 13H7.125C7.02554 13 6.93016 13.0395 6.85983 13.1098C6.78951 13.1802 6.75 13.2756 6.75 13.375V18.25C6.75 18.4489 6.67098 18.6397 6.53033 18.7803C6.38968 18.921 6.19891 19 6 19H0.75C0.551088 19 0.360322 18.921 0.21967 18.7803C0.0790178 18.6397 0 18.4489 0 18.25V9.25001C0.000184396 8.85225 0.15834 8.47086 0.439687 8.18969L7.93969 0.689694C8.22096 0.408602 8.60235 0.250702 9 0.250702C9.39765 0.250702 9.77904 0.408602 10.0603 0.689694L17.5603 8.18969C17.8417 8.47086 17.9998 8.85225 18 9.25001Z"
+                                        fill="#F97216" />
                                 </svg>
+
                             </div>
-                            <p class="font-semibold text-sm leading-[21px] transition-all duration-300 group-hover:text-[#F97316] text-current">Discover</p>
+                            <p
+                                class="font-semibold text-sm leading-[21px] transition-all duration-300 group-hover:text-[#F97316] text-current">
+                                Home</p>
                         </div>
                     </a>
                 </li>
                 <li class=" text-[#13181D]">
-                    <a href="check-booking.html" class="menu">
+                    <a href="{{route('front.check_booking')}}" class="menu">
                         <div class="group flex flex-col items-center text-center gap-[10px]">
                             <div class="w-6 h-6 flex shrink-0">
-                                <svg class="transition-all duration-300 group-hover:fill-[#F97316]  fill-current" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22.5 6V8.42C22.5 10 21.5 11 19.92 11H16.5V4.01C16.5 2.9 17.41 2 18.52 2C19.61 2.01 20.61 2.45 21.33 3.17C22.05 3.9 22.5 4.9 22.5 6Z"/>
-                                    <path opacity="0.4" d="M2.5 7V21C2.5 21.83 3.44001 22.3 4.10001 21.8L5.81 20.52C6.21 20.22 6.77 20.26 7.13 20.62L8.78999 22.29C9.17999 22.68 9.82001 22.68 10.21 22.29L11.89 20.61C12.24 20.26 12.8 20.22 13.19 20.52L14.9 21.8C15.56 22.29 16.5 21.82 16.5 21V4C16.5 2.9 17.4 2 18.5 2H7.5H6.5C3.5 2 2.5 3.79 2.5 6V7Z"/>
-                                    <path d="M12.5 9.75H6.5C6.09 9.75 5.75 9.41 5.75 9C5.75 8.59 6.09 8.25 6.5 8.25H12.5C12.91 8.25 13.25 8.59 13.25 9C13.25 9.41 12.91 9.75 12.5 9.75Z"/>
-                                    <path d="M11.75 13.75H7.25C6.84 13.75 6.5 13.41 6.5 13C6.5 12.59 6.84 12.25 7.25 12.25H11.75C12.16 12.25 12.5 12.59 12.5 13C12.5 13.41 12.16 13.75 11.75 13.75Z"/>
+                                <svg width="17" height="21" viewBox="0 0 17 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.25 13.25C12.25 13.4489 12.171 13.6397 12.0303 13.7803C11.8897 13.921 11.6989 14 11.5 14H5.5C5.30109 14 5.11032 13.921 4.96967 13.7803C4.82902 13.6397 4.75 13.4489 4.75 13.25C4.75 13.0511 4.82902 12.8603 4.96967 12.7197C5.11032 12.579 5.30109 12.5 5.5 12.5H11.5C11.6989 12.5 11.8897 12.579 12.0303 12.7197C12.171 12.8603 12.25 13.0511 12.25 13.25ZM11.5 9.49999H5.5C5.30109 9.49999 5.11032 9.579 4.96967 9.71966C4.82902 9.86031 4.75 10.0511 4.75 10.25C4.75 10.4489 4.82902 10.6397 4.96967 10.7803C5.11032 10.921 5.30109 11 5.5 11H11.5C11.6989 11 11.8897 10.921 12.0303 10.7803C12.171 10.6397 12.25 10.4489 12.25 10.25C12.25 10.0511 12.171 9.86031 12.0303 9.71966C11.8897 9.579 11.6989 9.49999 11.5 9.49999ZM16.75 3.49999V19.25C16.75 19.6478 16.592 20.0293 16.3107 20.3106C16.0294 20.592 15.6478 20.75 15.25 20.75H1.75C1.35218 20.75 0.970644 20.592 0.68934 20.3106C0.408035 20.0293 0.25 19.6478 0.25 19.25V3.49999C0.25 3.10216 0.408035 2.72063 0.68934 2.43933C0.970644 2.15802 1.35218 1.99999 1.75 1.99999H5.14937C5.57079 1.52817 6.08709 1.15066 6.6645 0.892197C7.2419 0.633729 7.86738 0.500122 8.5 0.500122C9.13262 0.500122 9.7581 0.633729 10.3355 0.892197C10.9129 1.15066 11.4292 1.52817 11.8506 1.99999H15.25C15.6478 1.99999 16.0294 2.15802 16.3107 2.43933C16.592 2.72063 16.75 3.10216 16.75 3.49999ZM5.5 4.99999H11.5C11.5 4.20434 11.1839 3.44127 10.6213 2.87867C10.0587 2.31606 9.29565 1.99999 8.5 1.99999C7.70435 1.99999 6.94129 2.31606 6.37868 2.87867C5.81607 3.44127 5.5 4.20434 5.5 4.99999ZM15.25 3.49999H12.7422C12.9128 3.98169 13 4.48896 13 4.99999V5.74999C13 5.9489 12.921 6.13966 12.7803 6.28032C12.6397 6.42097 12.4489 6.49999 12.25 6.49999H4.75C4.55109 6.49999 4.36032 6.42097 4.21967 6.28032C4.07902 6.13966 4 5.9489 4 5.74999V4.99999C4.00002 4.48896 4.08721 3.98169 4.25781 3.49999H1.75V19.25H15.25V3.49999Z"
+                                        fill="#FA7500" />
                                 </svg>
+
                             </div>
-                            <p class="font-semibold text-sm leading-[21px] transition-all duration-300 group-hover:text-[#F97316] text-current">Bookings</p>
+                            <p
+                                class="font-semibold text-sm leading-[21px] transition-all duration-300 group-hover:text-[#F97316] text-current">
+                                Bookings</p>
                         </div>
                     </a>
                 </li>
                 <li class=" text-[#13181D]">
-                    <a href="" class="menu">
+                    <a href="{{ route('front.customer_service')}}" class="menu">
                         <div class="group flex flex-col items-center text-center gap-[10px]">
                             <div class="w-6 h-6 flex shrink-0">
-                                <svg class="transition-all duration-300 group-hover:fill-[#F97316]  fill-current" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.4" d="M20.47 10V18C20.47 21 19.47 22 16.47 22H8.47C5.47 22 4.47 21 4.47 18V10H20.47Z"/>
-                                    <path d="M22 7V8C22 9.1 21.47 10 20 10H5C3.47 10 3 9.1 3 8V7C3 5.9 3.47 5 5 5H20C21.47 5 22 5.9 22 7Z"/>
-                                    <path opacity="0.4" d="M12.14 5H6.62C6.28 4.63 6.29 4.06 6.65 3.7L8.07 2.28C8.44 1.91 9.05 1.91 9.42 2.28L12.14 5Z"/>
-                                    <path opacity="0.4" d="M18.37 5H12.85L15.57 2.28C15.94 1.91 16.55 1.91 16.92 2.28L18.34 3.7C18.7 4.06 18.71 4.63 18.37 5Z"/>
-                                    <path opacity="0.6" d="M9.44 10V15.14C9.44 15.94 10.32 16.41 10.99 15.98L11.93 15.36C12.27 15.14 12.7 15.14 13.03 15.36L13.92 15.96C14.58 16.4 15.47 15.93 15.47 15.13V10H9.44Z"/>
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5 0.25C8.57164 0.25 6.68657 0.821828 5.08319 1.89317C3.47982 2.96451 2.23013 4.48726 1.49218 6.26884C0.754225 8.05042 0.561142 10.0108 0.937348 11.9021C1.31355 13.7934 2.24215 15.5307 3.60571 16.8943C4.96928 18.2579 6.70656 19.1865 8.59787 19.5627C10.4892 19.9389 12.4496 19.7458 14.2312 19.0078C16.0127 18.2699 17.5355 17.0202 18.6068 15.4168C19.6782 13.8134 20.25 11.9284 20.25 10C20.2473 7.41498 19.2192 4.93661 17.3913 3.10872C15.5634 1.28084 13.085 0.25273 10.5 0.25ZM10.5 18.25C8.86831 18.25 7.27326 17.7661 5.91655 16.8596C4.55984 15.9531 3.50242 14.6646 2.878 13.1571C2.25358 11.6496 2.0902 9.99085 2.40853 8.3905C2.72685 6.79016 3.51259 5.32015 4.66637 4.16637C5.82016 3.01259 7.29017 2.22685 8.89051 1.90852C10.4909 1.59019 12.1497 1.75357 13.6571 2.37799C15.1646 3.00242 16.4531 4.05984 17.3596 5.41655C18.2661 6.77325 18.75 8.3683 18.75 10C18.7475 12.1873 17.8775 14.2843 16.3309 15.8309C14.7843 17.3775 12.6873 18.2475 10.5 18.25ZM12 14.5C12 14.6989 11.921 14.8897 11.7803 15.0303C11.6397 15.171 11.4489 15.25 11.25 15.25C10.8522 15.25 10.4706 15.092 10.1893 14.8107C9.90804 14.5294 9.75 14.1478 9.75 13.75V10C9.55109 10 9.36033 9.92098 9.21967 9.78033C9.07902 9.63968 9 9.44891 9 9.25C9 9.05109 9.07902 8.86032 9.21967 8.71967C9.36033 8.57902 9.55109 8.5 9.75 8.5C10.1478 8.5 10.5294 8.65804 10.8107 8.93934C11.092 9.22064 11.25 9.60218 11.25 10V13.75C11.4489 13.75 11.6397 13.829 11.7803 13.9697C11.921 14.1103 12 14.3011 12 14.5ZM9 5.875C9 5.6525 9.06598 5.43499 9.1896 5.24998C9.31322 5.06498 9.48892 4.92078 9.69449 4.83564C9.90005 4.75049 10.1263 4.72821 10.3445 4.77162C10.5627 4.81502 10.7632 4.92217 10.9205 5.0795C11.0778 5.23684 11.185 5.43729 11.2284 5.65552C11.2718 5.87375 11.2495 6.09995 11.1644 6.30552C11.0792 6.51109 10.935 6.68679 10.75 6.8104C10.565 6.93402 10.3475 7 10.125 7C9.82664 7 9.54049 6.88147 9.32951 6.6705C9.11853 6.45952 9 6.17337 9 5.875Z"
+                                        fill="#FA7500" />
                                 </svg>
+
                             </div>
-                            <p class="font-semibold text-sm leading-[21px] transition-all duration-300 group-hover:text-[#F97316] text-current">Rewards</p>
-                        </div>
-                    </a>
-                </li>
-                <li class=" text-[#13181D]">
-                    <a href="" class="menu">
-                        <div class="group flex flex-col items-center text-center gap-[10px]">
-                            <div class="w-6 h-6 flex shrink-0">
-                                <svg class="transition-all duration-300 group-hover:fill-[#F97316]  fill-current" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.4" d="M18 18.86H17.24C16.44 18.86 15.68 19.17 15.12 19.73L13.41 21.42C12.63 22.19 11.36 22.19 10.58 21.42L8.87 19.73C8.31 19.17 7.54 18.86 6.75 18.86H6C4.34 18.86 3 17.53 3 15.89V4.97998C3 3.33998 4.34 2.01001 6 2.01001H18C19.66 2.01001 21 3.33998 21 4.97998V15.89C21 17.52 19.66 18.86 18 18.86Z"/>
-                                    <path d="M10.38 14.51H7.69998C7.25998 14.51 6.84998 14.3 6.58998 13.94C6.33998 13.6 6.27998 13.18 6.39998 12.78C6.74998 11.71 7.60998 11.13 8.36998 10.61C9.16998 10.07 9.61998 9.73002 9.61998 9.15002C9.61998 8.63002 9.19998 8.21002 8.67998 8.21002C8.15998 8.21002 7.73999 8.63002 7.73999 9.15002C7.73999 9.56002 7.39999 9.90002 6.98999 9.90002C6.57999 9.90002 6.23999 9.56002 6.23999 9.15002C6.23999 7.81002 7.32998 6.71002 8.67998 6.71002C10.03 6.71002 11.12 7.80002 11.12 9.15002C11.12 10.56 10.06 11.28 9.20999 11.86C8.67999 12.22 8.17998 12.56 7.92998 13.01H10.37C10.78 13.01 11.12 13.35 11.12 13.76C11.12 14.17 10.79 14.51 10.38 14.51Z"/>
-                                    <path d="M16.04 14.51C15.63 14.51 15.29 14.17 15.29 13.76V13.07H13.33C13.33 13.07 13.33 13.07 13.32 13.07C12.83 13.07 12.38 12.81 12.13 12.39C11.88 11.96 11.88 11.43 12.13 11.01C12.81 9.84001 13.6 8.50997 14.32 7.34997C14.64 6.83997 15.25 6.61002 15.82 6.77002C16.39 6.94002 16.79 7.45999 16.78 8.05999V11.58H17C17.41 11.58 17.75 11.92 17.75 12.33C17.75 12.74 17.41 13.08 17 13.08H16.79V13.77C16.79 14.18 16.46 14.51 16.04 14.51ZM15.29 8.64001C14.7 9.60001 14.09 10.63 13.54 11.57H15.29V8.64001Z"/>
-                                </svg>                                    
-                            </div>
-                            <p class="font-semibold text-sm leading-[21px] transition-all duration-300 group-hover:text-[#F97316] text-current">Support</p>
+                            <p
+                                class="font-semibold text-sm leading-[21px] transition-all duration-300 group-hover:text-[#F97316] text-current">
+                                Support</p>
                         </div>
                     </a>
                 </li>
@@ -375,7 +282,9 @@
         </nav>
     </div>
 
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/home.js"></script>
 </body>
+
 </html>

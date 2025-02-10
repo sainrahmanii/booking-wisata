@@ -872,6 +872,10 @@ video {
     width: 2.25rem;
 }
 
+.w-24 {
+    width: 7rem;
+}
+
 .w-\[120px\] {
     width: 120px;
 }
@@ -1478,6 +1482,18 @@ video {
         var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
         var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
         var(--tw-backdrop-sepia);
+}
+
+.h-167 {
+    height: 167px;
+}
+
+.bg-linear-to-b{
+    background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.brightness-50 {
+    filter: brightness(0.5);
 }
 
 .blur-2xl {

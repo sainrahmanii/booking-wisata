@@ -12,9 +12,9 @@ class BookingRepository implements BookingRepositoryInterface
         return BookingTransaction::create($data);
     }
 
-    public function findByTrxIdAndPhoneNumber($bookingTrxId, $phoneNumber)
+    public function findByTrxIdAndPhoneNumber($midtransBookingCode, $phoneNumber)
     {
-        return BookingTransaction::where('booking_trx_id', $bookingTrxId)
+        return BookingTransaction::where('midtrans_booking_code', $midtransBookingCode)
                                     ->where('phone_number', $phoneNumber)
                                     ->first();
     }

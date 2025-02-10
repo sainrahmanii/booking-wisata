@@ -16,6 +16,11 @@ class BookingService
         $this->bookingRepository = $bookingRepository;
     }
 
+    public function getBookingDetails($validated)
+    {
+        return $this->bookingRepository->findByTrxIdAndPhoneNumber($validated['midtrans_booking_code'], $validated['phone_number']);
+    }
+
     public function calculateTotals($ticketId, $totalParticipant)
     {
         $ppn = 0.11;
@@ -46,7 +51,7 @@ class BookingService
         ]);
     }
 
-    public function paymennt()
+    public function payment()
     {
         $booking = session('booking');
         $ticket = $this->ticketRepository->find($booking['ticket_id']);

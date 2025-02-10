@@ -7,8 +7,10 @@ use App\Filament\Widgets\ChartSuccessTransaction;
 use App\Filament\Widgets\StatsFailedTransaction;
 use App\Filament\Widgets\StatsOverview;
 use App\Filament\Widgets\StatsSuccessTransaction;
+use App\Filament\Widgets\SuccessAndFailed;
 use Filament\Pages\Page;
 use Filament\Panel;
+use GrahamCampbell\ResultType\Success;
 
 class Dashboard extends Page
 {
@@ -22,13 +24,9 @@ class Dashboard extends Page
     {
         return [
             StatsOverview::class,
-<<<<<<< HEAD
-            // ChartSuccessTransaction::class,
-            Category::class,
-=======
+            SuccessAndFailed::class,
             ChartSuccessTransaction::class,
-            StatsFailedTransaction::class,
->>>>>>> a7e298284b69a8a81ab2cfc7a1a331898084f4b7
+            Category::class,
         ];
     }
 }

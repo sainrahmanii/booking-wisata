@@ -14,7 +14,46 @@
 
 <body>
     <div class="relative flex flex-col w-full min-h-screen max-w-[390px] mx-auto bg-white">
-        <h1>Customer Service Page</h1>
+        <section class="w-full h-167 absolute bg-[#F97316] px-4">
+            <div id="Top-Nav" class="relative flex items-center w-full mt-[30px]">
+                <a href="{{route('front.index')}}">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_b_256_678)">
+                            <rect width="36" height="36" rx="16.8727" fill="white" fill-opacity="0.6" />
+                            <path
+                                d="M21.5307 24.9693C21.6004 25.039 21.6557 25.1217 21.6934 25.2128C21.7311 25.3038 21.7505 25.4014 21.7505 25.5C21.7505 25.5985 21.7311 25.6961 21.6934 25.7871C21.6557 25.8782 21.6004 25.9609 21.5307 26.0306C21.461 26.1003 21.3783 26.1555 21.2873 26.1933C21.1962 26.231 21.0986 26.2504 21.0001 26.2504C20.9016 26.2504 20.804 26.231 20.7129 26.1933C20.6219 26.1555 20.5392 26.1003 20.4695 26.0306L12.9695 18.5306C12.8997 18.4609 12.8444 18.3782 12.8067 18.2872C12.7689 18.1961 12.7495 18.0985 12.7495 18C12.7495 17.9014 12.7689 17.8038 12.8067 17.7128C12.8444 17.6217 12.8997 17.539 12.9695 17.4693L20.4695 9.96933C20.6102 9.8286 20.8011 9.74954 21.0001 9.74954C21.1991 9.74954 21.39 9.8286 21.5307 9.96933C21.6715 10.1101 21.7505 10.3009 21.7505 10.5C21.7505 10.699 21.6715 10.8899 21.5307 11.0306L14.5604 18L21.5307 24.9693Z"
+                                fill="#FA7500" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_b_256_678" x="-4" y="-4" width="44" height="44" filterUnits="userSpaceOnUse"
+                                color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_256_678" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_256_678"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </a>
+                <h1 class="font-bold text-lg leading-[27px] text-white text-center w-full">Help Center</h1>
+            </div>
+            <div class="w-full p-1 gap-1 mt-7 flex content-center rounded-full bg-[#94959966] backdrop-blur-sm">
+                <div class="w-full max-w-sm min-w-[200px] bg-white rounded-full content-center">
+                    <div class="relative flex content-center items-center px-4 py-12">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.5306 18.8748L14.8365 14.1816C16.1971 12.5482 16.8755 10.4532 16.7307 8.33233C16.5859 6.21147 15.629 4.22807 14.0591 2.79474C12.4892 1.36142 10.4271 0.588509 8.30188 0.636809C6.17663 0.685109 4.15181 1.5509 2.64864 3.05407C1.14547 4.55724 0.279683 6.58205 0.231383 8.70731C0.183083 10.8326 0.955989 12.8946 2.38932 14.4645C3.82265 16.0344 5.80604 16.9913 7.92691 17.1361C10.0478 17.2809 12.1428 16.6025 13.7762 15.242L18.4693 19.936C18.539 20.0057 18.6218 20.061 18.7128 20.0987C18.8038 20.1364 18.9014 20.1558 19 20.1558C19.0985 20.1558 19.1961 20.1364 19.2871 20.0987C19.3782 20.061 19.4609 20.0057 19.5306 19.936C19.6003 19.8663 19.6556 19.7836 19.6933 19.6926C19.731 19.6015 19.7504 19.5039 19.7504 19.4054C19.7504 19.3069 19.731 19.2093 19.6933 19.1182C19.6556 19.0272 19.6003 18.9445 19.5306 18.8748ZM1.74997 8.9054C1.74997 7.57037 2.14585 6.26533 2.88755 5.1553C3.62925 4.04526 4.68346 3.1801 5.91686 2.66921C7.15026 2.15832 8.50746 2.02465 9.81683 2.2851C11.1262 2.54555 12.3289 3.18842 13.2729 4.13243C14.2169 5.07643 14.8598 6.27916 15.1203 7.58854C15.3807 8.89791 15.2471 10.2551 14.7362 11.4885C14.2253 12.7219 13.3601 13.7761 12.2501 14.5178C11.14 15.2595 9.83499 15.6554 8.49997 15.6554C6.71037 15.6534 4.99463 14.9416 3.72919 13.6762C2.46375 12.4107 1.75196 10.695 1.74997 8.9054Z"
+                                fill="#3F3F3F" />
+                        </svg>
+                        <input
+                            class="w-full bg-white pl-5 p-4 rounded-full placeholder:text-slate-400 text-slate-700 text-sm focus:outline-none transition duration-300 ease shadow-sm"
+                            placeholder="Search your answer here" />
+                    </div>
+                </div>
+            </div>
+
+        </section>
         <nav id="Bottom-Nav" class="fixed bottom-0 w-full max-w-[390px] bg-white px-4 py-5 z-30">
             <ul class="flex justify-evenly max-[400px]:justify-between">
                 <li class=" text-[#13181D]">

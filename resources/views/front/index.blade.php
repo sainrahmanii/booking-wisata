@@ -17,7 +17,7 @@
         <img src="assets/images/backgrounds/home-background.png"
             class="bg-cover bg-center rounded-b-[30px] w-full h-[260px] absolute" alt="">
         <div class="relative my-[40px] px-4">
-            <a href="index.html">
+            <a href="{{route('front.index')}}">
                 <svg width="140" height="26" viewBox="0 0 140 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_48_145)">
                         <path

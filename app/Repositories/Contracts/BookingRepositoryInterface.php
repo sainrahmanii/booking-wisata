@@ -5,5 +5,5 @@ namespace App\Repositories\Contracts;
 interface BookingRepositoryInterface
 {
     public function createBooking(array $data);
-    public function findByTrxIdAndPhoneNumber($bookingTrxId, $phoneNumber);
+    public function findByTrxIdAndPhoneNumber($midtransBookingCode, $phoneNumber);
 }

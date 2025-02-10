@@ -39,7 +39,7 @@
                     <div
                         class="flex items-center rounded-full px-5 gap-[10px] bg-[#F8F8F9] transition-all duration-300 focus-within:ring-1 focus-within:ring-[#F97316]">
                         <img src="{{asset('assets/images/icons/user-octagon.svg')}}" class="w-6 h-6" alt="icon">
-                        <input type="text" name="booking_trx_id" id="bookId"
+                        <input type="text" name="midtrans_booking_code" id="bookId"
                             class="appearance-none outline-none py-[14px] !bg-transparent w-full font-semibold text-sm leading-[21px] placeholder:font-normal placeholder:text-[#13181D]"
                             placeholder="What’s your booking ID">
                     </div>

@@ -31,13 +31,18 @@ class BookingController extends Controller
  
         // dd($bookingDetails);
         // ngambil data pada hari ini
-        $today = Carbon::now()->isoFormat('dddd, D MMMM Y');
+        $today = Carbon::now();
+        $start_date = Carbon::parse($bookingDetails->started_at);
+
+        $dateStart = Carbon::parse($bookingDetails->started_at)->isoFormat('dddd, D MMMM Y');
+
+        dd($today, $start_date, $dateStart);
  
         if ($bookingDetails) {
-            return view('front.check_booking_details', compact('bookingDetails', 'today'));
+            return view('front.check_booking_details', compact('bookingDetails', 'dateStart', 'today', 'start_date'));
         }
  
-        return redirect()->route('front.check_booking')->withErrors(['error' => 'Transaction nout found']);
+        return redirect()->route('front.check_booking')->withErrors(['error' => 'Transaction not found']);
     }
 
     public function booking(Ticket $ticket)

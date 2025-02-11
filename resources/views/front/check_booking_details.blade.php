@@ -1,18 +1,18 @@
 <!doctype html>
 <html>
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{asset('output.css')}}" rel="stylesheet">
- 
+
     <title>Check My Booking - {{$bookingDetails->ticket->name}}</title>
     <link rel="icon" href="{{asset('assets/images/icons/ticket-star.svg')}}" type="image/x-icon">
- 
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
 </head>
- 
+
 <body>
     <div class="relative flex flex-col w-full min-h-screen max-w-[390px] mx-auto bg-[#F8F8F9]">
         <div id="background" class="fixed w-full max-w-[390px] top-0 h-screen z-0">
@@ -25,24 +25,24 @@
             class="relative flex items-center justify-between w-full max-w-[390px] px-4 mt-[60px] z-20">
             <div class="fixed flex items-center justify-between w-full max-w-[390px] -ml-4 px-4 mx-auto">
                 <a href="{{route('front.check_booking')}}">
-                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_b_256_678)">
-                        <rect width="36" height="36" rx="16.8727" fill="white" fill-opacity="0.6" />
-                        <path
-                            d="M21.5307 24.9693C21.6004 25.039 21.6557 25.1217 21.6934 25.2128C21.7311 25.3038 21.7505 25.4014 21.7505 25.5C21.7505 25.5985 21.7311 25.6961 21.6934 25.7871C21.6557 25.8782 21.6004 25.9609 21.5307 26.0306C21.461 26.1003 21.3783 26.1555 21.2873 26.1933C21.1962 26.231 21.0986 26.2504 21.0001 26.2504C20.9016 26.2504 20.804 26.231 20.7129 26.1933C20.6219 26.1555 20.5392 26.1003 20.4695 26.0306L12.9695 18.5306C12.8997 18.4609 12.8444 18.3782 12.8067 18.2872C12.7689 18.1961 12.7495 18.0985 12.7495 18C12.7495 17.9014 12.7689 17.8038 12.8067 17.7128C12.8444 17.6217 12.8997 17.539 12.9695 17.4693L20.4695 9.96933C20.6102 9.8286 20.8011 9.74954 21.0001 9.74954C21.1991 9.74954 21.39 9.8286 21.5307 9.96933C21.6715 10.1101 21.7505 10.3009 21.7505 10.5C21.7505 10.699 21.6715 10.8899 21.5307 11.0306L14.5604 18L21.5307 24.9693Z"
-                            fill="#FA7500" />
-                    </g>
-                    <defs>
-                        <filter id="filter0_b_256_678" x="-4" y="-4" width="44" height="44" filterUnits="userSpaceOnUse"
-                            color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
-                            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_256_678" />
-                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_256_678"
-                                result="shape" />
-                        </filter>
-                    </defs>
-                </svg>
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_b_256_678)">
+                            <rect width="36" height="36" rx="16.8727" fill="white" fill-opacity="0.6" />
+                            <path
+                                d="M21.5307 24.9693C21.6004 25.039 21.6557 25.1217 21.6934 25.2128C21.7311 25.3038 21.7505 25.4014 21.7505 25.5C21.7505 25.5985 21.7311 25.6961 21.6934 25.7871C21.6557 25.8782 21.6004 25.9609 21.5307 26.0306C21.461 26.1003 21.3783 26.1555 21.2873 26.1933C21.1962 26.231 21.0986 26.2504 21.0001 26.2504C20.9016 26.2504 20.804 26.231 20.7129 26.1933C20.6219 26.1555 20.5392 26.1003 20.4695 26.0306L12.9695 18.5306C12.8997 18.4609 12.8444 18.3782 12.8067 18.2872C12.7689 18.1961 12.7495 18.0985 12.7495 18C12.7495 17.9014 12.7689 17.8038 12.8067 17.7128C12.8444 17.6217 12.8997 17.539 12.9695 17.4693L20.4695 9.96933C20.6102 9.8286 20.8011 9.74954 21.0001 9.74954C21.1991 9.74954 21.39 9.8286 21.5307 9.96933C21.6715 10.1101 21.7505 10.3009 21.7505 10.5C21.7505 10.699 21.6715 10.8899 21.5307 11.0306L14.5604 18L21.5307 24.9693Z"
+                                fill="#FA7500" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_b_256_678" x="-4" y="-4" width="44" height="44" filterUnits="userSpaceOnUse"
+                                color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_256_678" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_256_678"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
                 </a>
             </div>
             <div class="flex items-center justify-center h-12 w-full shrink-0">
@@ -87,7 +87,7 @@
                         <div class="flex items-center justify-between">
                             <p class="font-bold text-sm leading-[21px]">Started At</p>
                             <p class="font-bold text-sm leading-[21px] text-[#FF1927]">
-                                {{$bookingDetails->started_at}}
+                                {{$dateStart}}
                             </p>
                         </div>
                         <div class="flex items-center justify-between">
@@ -107,12 +107,13 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <p class="font-bold text-sm leading-[21px]">Payment Status</p>
-                            @if($bookingDetails->is_paid == 1)
+                            @if($bookingDetails->payment_status == 'success')
                             <p
                                 class="w-fit rounded-full p-[6px_12px] bg-[#07B704] font-bold text-xs leading-[18px] text-white">
                                 SUCCESS
                             </p>
-                            @elseif($bookingDetails->started_at >= $today) <p
+                            @elseif($start_date < $today) 
+                            <p
                                 class="w-fit rounded-full p-[6px_12px] bg-red font-bold text-xs leading-[18px] text-white">
                                 FAILED
                             </p>
@@ -127,15 +128,14 @@
                     <hr class="w-[321px] mx-auto border border-[#D0D5DC] border-dashed">
                     <div class="flex items-center rounded-[20px] p-[10px] gap-[10px] bg-[#F8F8F9]">
                         <img src="{{asset('assets/images/icons/ticket-star-black.svg')}}" class="w-8 h-8" alt="icon">
-                        <p class="leading-[28px]">Gunakan kode <span
-                                class="font-bold">{{$bookingDetails->booking_trx_id}}</span> ketika menukarkan
-                            dengan tiket asli</p>
+                        <p class="leading-[28px]">Kode Booking Anda <span
+                                class="font-bold">{{$bookingDetails->midtrans_booking_code}}</span>, disetujui oleh admin</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
- 
+
 </body>
- 
+
 </html>

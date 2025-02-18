@@ -33,6 +33,16 @@ class BookingTransactionResource extends Resource
 
     protected static ?string $navigationGroup = 'Customer';
 
+    public static function getNavigationBadge(): ?string
+    {
+        return BookingTransaction::where('is_paid', 0)->count();
+    }
+
+    public static function getNavigationBadgeColor(): string
+    {
+        return 'warning'; // Warna kuning
+    }
+
     public static function form(Form $form): Form
     {
         return $form
@@ -41,84 +51,84 @@ class BookingTransactionResource extends Resource
 
                 Wizard::make([
                     Step::make('Product and price')
-                    ->schema([
-                        Select::make('ticket_id')
-                        ->relationship('ticket', 'name')
-                        ->searchable()
-                        ->preload()
-                        ->required()
-                        ->reactive()
-                        ->afterStateUpdated(function ($state, callable $set){
-                            $ticket = Ticket::find($state);
-                            $set('price', $ticket ? $ticket->price : 0);
-                        }),
+                        ->schema([
+                            Select::make('ticket_id')
+                                ->relationship('ticket', 'name')
+                                ->searchable()
+                                ->preload()
+                                ->required()
+                                ->reactive()
+                                ->afterStateUpdated(function ($state, callable $set) {
+                                    $ticket = Ticket::find($state);
+                                    $set('price', $ticket ? $ticket->price : 0);
+                                }),
 
-                        TextInput::make('total_participant')
-                        ->required()
-                        ->numeric()
-                        ->prefix('people')
-                        ->reactive()
-                        ->afterStateUpdated(function ($state, callable $get, callable $set){
-                            $price = $get('price');
-                            $subtotal = $price * $state;
-                            $totalPpn = $subtotal * 0.11;
-                            $totalAmount = $subtotal + $totalPpn;
+                            TextInput::make('total_participant')
+                                ->required()
+                                ->numeric()
+                                ->prefix('people')
+                                ->reactive()
+                                ->afterStateUpdated(function ($state, callable $get, callable $set) {
+                                    $price = $get('price');
+                                    $subtotal = $price * $state;
+                                    $totalPpn = $subtotal * 0.11;
+                                    $totalAmount = $subtotal + $totalPpn;
 
-                            $set('total_amount', $totalAmount);
-                        }),
+                                    $set('total_amount', $totalAmount);
+                                }),
 
-                        TextInput::make('total_amount')
-                        ->required()
-                        ->numeric()
-                        ->prefix('IDR')
-                        ->readOnly()
-                        ->helperText('Harga sudah include PPN 11%')
-                    ]),
+                            TextInput::make('total_amount')
+                                ->required()
+                                ->numeric()
+                                ->prefix('IDR')
+                                ->readOnly()
+                                ->helperText('Harga sudah include PPN 11%')
+                        ]),
 
                     Step::make('Customer Information')
-                    ->schema([
-                        TextInput::make('name')
-                        ->required()
-                        ->maxLength(255),
+                        ->schema([
+                            TextInput::make('name')
+                                ->required()
+                                ->maxLength(255),
 
-                        TextInput::make('phone_number')
-                        ->required()
-                        ->maxLength(255),
+                            TextInput::make('phone_number')
+                                ->required()
+                                ->maxLength(255),
 
-                        TextInput::make('email')
-                        ->required()
-                        ->maxLength(255),
+                            TextInput::make('email')
+                                ->required()
+                                ->maxLength(255),
 
-                        TextInput::make('midtrans_booking_code')
-                        ->required()
-                        ->maxLength(255)
-                    ]),
+                            TextInput::make('booking_trx_id')
+                                ->required()
+                                ->maxLength(255)
+                        ]),
 
                     Step::make('Payment Information')
-                    ->schema([
-                        ToggleButtons::make('is_paid')
-                        ->label('Apakah sudah membayar')
-                        ->boolean()
-                        ->grouped()
-                        ->icons([
-                            true => 'heroicon-o-pencil',
-                            false => 'heroicon-o-clock'
+                        ->schema([
+                            ToggleButtons::make('is_paid')
+                                ->label('Apakah sudah membayar')
+                                ->boolean()
+                                ->grouped()
+                                ->icons([
+                                    true => 'heroicon-o-pencil',
+                                    false => 'heroicon-o-clock'
+                                ])
+                                ->required(),
+
+                            FileUpload::make('proof')
+                                ->image()
+                                ->required(),
+
+                            DatePicker::make('started_at')
+                                ->required()
+
                         ])
-                        ->required(),
-
-                        FileUpload::make('proof')
-                        ->image()
-                        ->required(),
-
-                        DatePicker::make('started_at')
-                        ->required()
-
-                    ])
                 ])
 
-                ->columnSpan('full')
-                ->columns(1)
-                ->skippable()
+                    ->columnSpan('full')
+                    ->columns(1)
+                    ->skippable()
 
             ]);
     }
@@ -129,34 +139,34 @@ class BookingTransactionResource extends Resource
             ->columns([
                 //
                 ImageColumn::make('ticket.thumbnail')
-                ->label('Image'),
+                    ->label('Image'),
 
                 TextColumn::make('name')
-                ->searchable(),
-                
+                    ->searchable(),
+
                 TextColumn::make('ticket.name')
-                ->searchable(),
-                
+                    ->searchable(),
+
                 TextColumn::make('total_amount')
-                ->money('IDR'),
+                    ->money('IDR'),
 
-                TextColumn::make('midtrans_booking_code')
-                ->searchable(),
+                TextColumn::make('booking_trx_id')
+                    ->searchable(),
 
-                TextColumn::make('payment_status')
-                ->badge()
-                ->color(fn (string $state): string => match ($state) {
-                    'waiting' => 'warning',
-                    'success' => 'success',
-                    'failed' => 'danger'
-                })
+                // TextColumn::make('is_paid')
+                //     ->badge()
+                //     ->color(fn(string $state): string => match ($state) {
+                //         0 => 'warning',
+                //         1 => 'success',
+                //         // 'failed' => 'danger'
+                //     })
 
             ])
             ->filters([
                 //
                 SelectFilter::make('ticket_id')
-                ->label('ticket')
-                ->relationship('ticket', 'name')
+                    ->label('ticket')
+                    ->relationship('ticket', 'name')
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),

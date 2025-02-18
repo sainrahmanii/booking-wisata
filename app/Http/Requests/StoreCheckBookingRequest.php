@@ -22,7 +22,7 @@ class StoreCheckBookingRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'midtrans_booking_code' => ['required', 'string', 'max:255'],
+            'booking_trx_id' => ['required', 'string', 'max:255'],
             'phone_number' => ['required', 'string', 'max:255'],
         ];
     }

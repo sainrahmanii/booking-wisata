@@ -13,8 +13,8 @@ class StatsOverview extends BaseWidget
     protected function getStats(): array
     {
         $totalTransacations = BookingTransaction::count();
-        $totalRevenue = BookingTransaction::where('payment_status', 'success')->sum('total_amount');
-        $totalParticipant = BookingTransaction::where('payment_status', 'success')->sum('total_participant');
+        $totalRevenue = BookingTransaction::where('is_paid', 1)->sum('total_amount');
+        $totalParticipant = BookingTransaction::where('is_paid', 1)->sum('total_participant');
 
         return [
             Stat::make('Total Revenue', number_format($totalRevenue, 2, ".", "."))

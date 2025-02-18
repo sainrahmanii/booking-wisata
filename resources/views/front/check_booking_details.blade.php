@@ -18,8 +18,8 @@
         <div id="background" class="fixed w-full max-w-[390px] top-0 h-screen z-0">
             <div class="absolute z-0 w-full h-[459px] bg-[linear-gradient(180deg,#000000_12.61%,rgba(0,0,0,0)_70.74%)]">
             </div>
-            <img src="{{Storage::url($bookingDetails->ticket->thumbnail)}}" class="w-full h-full object-cover brightness-50"
-                alt="background">
+            <img src="{{Storage::url($bookingDetails->ticket->thumbnail)}}"
+                class="w-full h-full object-cover brightness-50" alt="background">
         </div>
         <div id="Top-Nav-Fixed"
             class="relative flex items-center justify-between w-full max-w-[390px] px-4 mt-[60px] z-20">
@@ -33,8 +33,8 @@
                                 fill="#FA7500" />
                         </g>
                         <defs>
-                            <filter id="filter0_b_256_678" x="-4" y="-4" width="44" height="44" filterUnits="userSpaceOnUse"
-                                color-interpolation-filters="sRGB">
+                            <filter id="filter0_b_256_678" x="-4" y="-4" width="44" height="44"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                                 <feFlood flood-opacity="0" result="BackgroundImageFix" />
                                 <feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
                                 <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_256_678" />
@@ -50,6 +50,11 @@
             </div>
         </div>
         <main class="relative flex flex-col w-full px-4 gap-[18px] mt-5 pb-[30px] overflow-x-hidden">
+            @if(session('error'))
+            <div class="w-full p-4 mb-4 text-sm text-white bg-red-500 rounded-lg">
+                {{ session('error') }}
+            </div>
+            @endif
             <div class="flex items-center justify-between rounded-3xl p-[6px] pr-[14px] bg-white overflow-hidden">
                 <div class="flex items-center gap-[14px]">
                     <div class="flex w-[90px] h-[90px] shrink-0 rounded-3xl bg-[#D9D9D9] overflow-hidden">
@@ -82,7 +87,7 @@
                     <div class="flex flex-col gap-[14px] shrink-0 h-full">
                         <div class="flex items-center justify-between">
                             <p class="font-bold text-sm leading-[21px]">Booking TRX ID</p>
-                            <p class="font-bold text-xl leading-[30px]">{{$bookingDetails->midtrans_booking_code}}</p>
+                            <p class="font-bold text-xl leading-[30px]">{{$bookingDetails->booking_trx_id}}</p>
                         </div>
                         <div class="flex items-center justify-between">
                             <p class="font-bold text-sm leading-[21px]">Started At</p>
@@ -107,29 +112,28 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <p class="font-bold text-sm leading-[21px]">Payment Status</p>
-                            @if($bookingDetails->payment_status == 'success')
+                            @if($bookingDetails->is_paid == 1)
                             <p
                                 class="w-fit rounded-full p-[6px_12px] bg-[#07B704] font-bold text-xs leading-[18px] text-white">
                                 SUCCESS
                             </p>
-                            @elseif($start_date < $today) 
-                            <p
+                            @elseif($dateStart < $today) <p
                                 class="w-fit rounded-full p-[6px_12px] bg-red font-bold text-xs leading-[18px] text-white">
                                 FAILED
-                            </p>
-                            @else
-                            <p
-                                class="w-fit rounded-full p-[6px_12px] bg-[#13181D] font-bold text-xs leading-[18px] text-white">
-                                PENDING
-                            </p>
-                            @endif
+                                </p>
+                                @else
+                                <p
+                                    class="w-fit rounded-full p-[6px_12px] bg-[#13181D] font-bold text-xs leading-[18px] text-white">
+                                    PENDING
+                                </p>
+                                @endif
                         </div>
                     </div>
                     <hr class="w-[321px] mx-auto border border-[#D0D5DC] border-dashed">
                     <div class="flex items-center rounded-[20px] p-[10px] gap-[10px] bg-[#F8F8F9]">
                         <img src="{{asset('assets/images/icons/ticket-star-black.svg')}}" class="w-8 h-8" alt="icon">
-                        <p class="leading-[28px]">Kode Booking Anda <span
-                                class="font-bold">{{$bookingDetails->midtrans_booking_code}}</span>, disetujui oleh admin</p>
+                        <p class="leading-[28px]">Redeem code <span
+                                class="font-bold">{{$bookingDetails->booking_trx_id}}</span> for your trip.</p>
                     </div>
                 </div>
             </div>

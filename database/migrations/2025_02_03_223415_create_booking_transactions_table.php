@@ -17,13 +17,12 @@ return new class extends Migration
             $table->string('phone_number');
             $table->string('email');
             $table->string('proof');
+            $table->string('booking_trx_id');
             $table->unsignedBigInteger('total_amount');
             $table->unsignedBigInteger('total_participant');
             $table->date('started_at');
             $table->foreignId('ticket_id')->constrained()->cascadeOnDelete();
-            $table->string('payment_status', 100)->default('waiting');
-            $table->string('midtrans_url')->nullable();
-            $table->string('midtrans_booking_code');
+            $table->boolean('is_paid')->default(false);
             $table->softDeletes();
             $table->timestamps();
         });

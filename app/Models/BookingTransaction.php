@@ -20,13 +20,22 @@ class BookingTransaction extends Model
         'total_participant',
         'started_at',
         'ticket_id',
-        'midtrans_payment_status',
-        'midtrans_url',
-        'midtrans_booking_code'
+        'is_paid',
+        'booking_trx_id',
     ];
+
+    public static function generateUniqueTrxId()
+    {
+        $prefix = 'WSTL';
+        do {
+            $randomString = $prefix . mt_rand(1000, 9999);
+        } while (self::where('booking_trx_id', $randomString)->exists());
+
+        return $randomString;
+    }
 
     public function ticket(): BelongsTo
     {
-        return $this->belongsTo(Ticket::class, 'ticket_id');    
+        return $this->belongsTo(Ticket::class, 'ticket_id');
     }
 }

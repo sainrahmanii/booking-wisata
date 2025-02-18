@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreBookingRequest;
 use App\Http\Requests\StoreCheckBookingRequest;
+use App\Http\Requests\StorePaymentRequest;
 use App\Models\BookingTransaction;
 use App\Models\Ticket;
 use App\Services\BookingService;
@@ -45,7 +46,7 @@ class BookingController extends Controller
 
         $dateStart = Carbon::parse($bookingDetails->started_at)->isoFormat('dddd, D MMMM Y');
 
-        dd($today, $start_date, $dateStart);
+        // dd($today, $start_date, $dateStart);
 
         if ($bookingDetails) {
             return view('front.check_booking_details', compact('bookingDetails', 'dateStart', 'today', 'start_date'));
@@ -66,67 +67,32 @@ class BookingController extends Controller
         $totals = $this->bookingService->calculateTotals($ticket->id, $validated['total_participant']);
         $this->bookingService->storeBookingInSession($ticket, $validated, $totals);
 
+        $booking = session('booking');
+        // dd($booking);
+
         return redirect()->route('front.payment');
     }
 
     public function payment()
     {
         $data = $this->bookingService->payment();
+        // dd($data);
         return view('front.payment', $data);
     }
 
-    public function getSnapRedirect(BookingTransaction $bookingTransaction)
+    public function paymentStore(StorePaymentRequest $request)
     {
-        $bookingCode = Str::random(5);
-        $bookingTransaction->midtrans_booking_code = $bookingCode;
+        $validated = $request->validated();
+        $bookingTransactionId = $this->bookingService->paymentStore($validated);
 
-        $transaction_details = [
-            'order_id' => $bookingCode,
-            'gross_amount' => $bookingTransaction->total_amount,
-        ];
-
-        $item_details = [
-            'id' => $bookingCode,
-            'price' => $bookingTransaction->ticket->price,
-            'quantity' => $bookingTransaction->total_participant,
-            'name' => $bookingTransaction->ticket->name,
-        ];
-
-        $user_data = [
-            'first_name' => $bookingTransaction->name,
-            'last_name' => "",
-            'email' => $bookingTransaction->email,
-            'phone' => $bookingTransaction->phone_number,
-            'address' => "",
-            'city' => "",
-            'postal_code' => "",
-            'country_code' => "IDN",
-        ];
-
-        $customer_details = [
-            'first_name' => $bookingTransaction->name,
-            'last_name' => "",
-            'email' => $bookingTransaction->email,
-            'phone' => $bookingTransaction->phone_number,
-            'billing_address' => $user_data,
-            'shipping_address' => $user_data, 
-        ];
-
-        $midtransParams = [
-            'transaction_details' => $transaction_details,
-            'item_details' => $item_details ,
-            'customer_details' => $customer_details,
-        ];
-
-        try {
-            $payment_url = \Midtrans\Snap::createTransaction($midtransParams)->redirect_url;
-            $bookingTransaction->midtrans_url = $payment_url;
-            $bookingTransaction->save();
-        } catch (Exception $e) {
-            return false;
+        if ($bookingTransactionId) {
+            return redirect()->route('front.booking_finished', $bookingTransactionId);
         }
+
+        return redirect()->route('front.index')->withErrors(['error' => 'Payment failed. Please try again']);
     }
 
+<<<<<<< HEAD
     public function midtransCallback(StoreBookingRequest $request)
     {
         $notif = new Midtrans\Notification();
@@ -170,3 +136,66 @@ class BookingController extends Controller
         return redirect()->route('front.booking_finished', $checkout);
     }
 }
+=======
+    public function bookingFinished(BookingTransaction $bookingTransaction)
+    {
+        return view('front.booking_finished', compact('bookingTransaction'));
+    }
+
+    //     public function getSnapRedirect(BookingTransaction $bookingTransaction)
+    //     {
+    //         $bookingTransaction = BookingTransaction::with('ticket')->find($bookingTransaction->id);
+    // 
+    //         $bookingCode = Str::random(5);
+    //         $bookingTransaction['midtrans_booking_code'] = $bookingCode;
+    // 
+    //         $transaction_details = [
+    //             'order_id' => $bookingCode,
+    //             'gross_amount' => $bookingTransaction->total_amount,
+    //         ];
+    // 
+    //         $item_details = [
+    //             'id' => $bookingCode,
+    //             'total-price' => $bookingTransaction->total_amount,
+    //             'quantity' => $bookingTransaction->total_participant,
+    //             'name' => $bookingTransaction->ticket_id->name,
+    //         ];
+    // 
+    //         $user_data = [
+    //             'first_name' => $bookingTransaction->name,
+    //             'last_name' => "",
+    //             'email' => $bookingTransaction->email,
+    //             'phone' => $bookingTransaction->phone_number,
+    //             'address' => "",
+    //             'city' => "",
+    //             'postal_code' => "",
+    //             'country_code' => "IDN",
+    //         ];
+    // 
+    //         $customer_details = [
+    //             'first_name' => $bookingTransaction->name,
+    //             'last_name' => "",
+    //             'email' => $bookingTransaction->email,
+    //             'phone' => $bookingTransaction->phone_number,
+    //             'billing_address' => $user_data,
+    //             'shipping_address' => $user_data,
+    //         ];
+    // 
+    //         $midtransParams = [
+    //             'transaction_details' => $transaction_details,
+    //             'item_details' => $item_details,
+    //             'customer_details' => $customer_details,
+    //         ];
+    // 
+    //         dd($midtransParams);
+    // 
+    //         try {
+    //             $payment_url = \Midtrans\Snap::createTransaction($midtransParams)->redirect_url;
+    //             $bookingTransaction->midtrans_url = $payment_url;
+    //             $bookingTransaction->save();
+    //         } catch (Exception $e) {
+    //             return false;
+    //         }
+    //     }
+}
+>>>>>>> d43ce74dcae54877ff6542fe0cea3ed7f03e5317

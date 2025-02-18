@@ -17,13 +17,14 @@
         <div id="background" class="fixed w-full max-w-[390px] top-0 h-screen z-0">
             <div class="absolute z-0 w-full h-[459px] bg-[linear-gradient(180deg,#000000_12.61%,rgba(0,0,0,0)_70.74%)]">
             </div>
-            <img src="{{Storage::url($ticket->thumbnail)}}" class="w-full h-full object-cover brightness-50" alt="background">
+            <img src="{{Storage::url($ticket->thumbnail)}}" class="w-full h-full object-cover brightness-50"
+                alt="background">
         </div>
         <div id="Top-Nav-Fixed"
             class="relative flex items-center justify-between w-full max-w-[390px] px-4 mt-[60px] z-20">
             <div class="fixed flex items-center justify-between w-full max-w-[390px] -ml-4 px-4 mx-auto">
                 <a href="{{route('front.details', $ticket->slug)}}">
-                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_b_256_678)">
                             <rect width="36" height="36" rx="16.8727" fill="white" fill-opacity="0.6" />
                             <path
@@ -143,15 +144,18 @@
                 <div class="gap-1">
                     <div class="flex items-center justify-between">
                         <p class="font-semibold text-sm leading-[21px]">PPN</p>
-                        <p id="total-ppn-price" class="text-[12px] leading-[33px] text-[#F97316]"></p>
+                        <p id="total-ppn-price" name="total_ppn" class="text-[12px] leading-[33px] text-[#F97316]"></p>
                     </div>
                     <div class="flex items-center justify-between">
                         <p class="font-semibold text-sm leading-[21px]">Subtotal Booking Price</p>
-                        <p id="total-price-people" class="text-[12px] leading-[33px] text-[#F97316]"></p>
+                        <p id="total-price-people" name="total-price-people"
+                            class="text-[12px] leading-[33px] text-[#F97316]"></p>
                     </div>
                     <div class="flex items-center justify-between">
                         <p class="font-semibold text-sm leading-[21px]">Grand Total Price</p>
-                        <p id="total-price" class="font-bold text-[22px] leading-[33px] text-[#F97316]"></p>
+                        <p id="total-price" name="total_amount"
+                            class="font-bold text-[22px] leading-[33px] text-[#F97316]">
+                        </p>
                     </div>
                 </div>
                 <button type="submit"

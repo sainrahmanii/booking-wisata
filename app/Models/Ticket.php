@@ -36,16 +36,21 @@ class Ticket extends Model
 
     public function category(): BelongsTo
     {
-        return $this->belongsTo(Category::class, 'category_id');   
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
     public function seller(): BelongsTo
     {
-        return $this->belongsTo(Seller::class, 'seller_id');   
+        return $this->belongsTo(Seller::class, 'seller_id');
     }
 
     public function photos(): HasMany
     {
-        return $this->hasMany(TicketPhoto::class);   
+        return $this->hasMany(TicketPhoto::class);
+    }
+
+    public function tickets(): HasMany
+    {
+        return $this->hasMany(BookingTransaction::class);
     }
 }

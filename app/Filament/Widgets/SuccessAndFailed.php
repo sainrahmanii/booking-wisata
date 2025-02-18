@@ -10,9 +10,9 @@ class SuccessAndFailed extends BaseWidget
 {
     protected function getStats(): array
     {
-        $approvedTransactions = BookingTransaction::where('payment_status', 'success')->count();
-        $failedTransactions = BookingTransaction::where('payment_status', 'failed')->count();
-        $waitingTransactions = BookingTransaction::where('payment_status', 'waiting')->count();
+        $approvedTransactions = BookingTransaction::where('is_paid', 'true')->count();
+        $failedTransactions = BookingTransaction::where('is_paid', 'false')->count();
+        $waitingTransactions = BookingTransaction::where('is_paid', 'waiting')->count();
         return [
             Stat::make('Total Success Transactions', $approvedTransactions)
                 ->description('All Transactions')

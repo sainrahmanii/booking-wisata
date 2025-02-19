@@ -92,51 +92,6 @@ class BookingController extends Controller
         return redirect()->route('front.index')->withErrors(['error' => 'Payment failed. Please try again']);
     }
 
-<<<<<<< HEAD
-    public function midtransCallback(StoreBookingRequest $request)
-    {
-        $notif = new Midtrans\Notification();
-
-        $transaction_status = $notif->transaction_status;
-        $fraud = $notif->fraud_status;
-
-        $checkout_id = $notif->midtrans_booking_code;
-        $checkout = BookingTransaction::find($checkout_id);
-
-        if ($transaction_status == 'capture') {
-            if ($fraud == 'challenge') {
-                $checkout->midtrans_payment_status = 'pending';
-            }
-            else if ($fraud == 'accept') {
-                $checkout->midtrans_payment_status = 'paid';
-            }
-        }
-        else if ($transaction_status == 'cancel') {
-            if ($fraud == 'challenge') {
-                $checkout->midtrans_payment_status = 'failed';
-            }
-            else if ($fraud == 'accept') {
-                $checkout->midtrans_payment_status = 'failed';
-            }
-        }
-        else if ($transaction_status == 'deny') {
-            $checkout->midtrans_payment_status = 'failed';
-        }
-        else if ($transaction_status == 'settlement') {
-            $checkout->midtrans_payment_status = 'paid';
-        }
-        else if ($transaction_status == 'pending') {
-            $checkout->midtrans_payment_status = 'pending';
-        }
-        else if ($transaction_status == 'expire') {
-            $checkout->midtrans_payment_status = 'failed';
-        }
-
-        $checkout->save();
-        return redirect()->route('front.booking_finished', $checkout);
-    }
-}
-=======
     public function bookingFinished(BookingTransaction $bookingTransaction)
     {
         return view('front.booking_finished', compact('bookingTransaction'));
@@ -198,4 +153,3 @@ class BookingController extends Controller
     //         }
     //     }
 }
->>>>>>> d43ce74dcae54877ff6542fe0cea3ed7f03e5317

@@ -118,7 +118,7 @@
                                 SUCCESS
                             </p>
                             @elseif($dateStart < $today) <p
-                                class="w-fit rounded-full p-[6px_12px] bg-red font-bold text-xs leading-[18px] text-white">
+                                class="w-fit rounded-full p-[6px_12px] bg-[red] font-bold text-xs leading-[18px] text-white">
                                 FAILED
                                 </p>
                                 @else
@@ -130,11 +130,18 @@
                         </div>
                     </div>
                     <hr class="w-[321px] mx-auto border border-[#D0D5DC] border-dashed">
+                    @if($bookingDetails->is_paid == 1 && $dateStart >= $today)
                     <div class="flex items-center rounded-[20px] p-[10px] gap-[10px] bg-[#F8F8F9]">
                         <img src="{{asset('assets/images/icons/ticket-star-black.svg')}}" class="w-8 h-8" alt="icon">
                         <p class="leading-[28px]">Redeem code <span
                                 class="font-bold">{{$bookingDetails->booking_trx_id}}</span> for your trip.</p>
                     </div>
+
+                    @elseif($bookingDetails->is_paid == 0 && $start_date >= $today)
+                    <h2 class="text-center">Admin still checking your booking transaction</h2>
+                    @elseif($start_date < $today)
+                        <h2 class="text-center">Your Booking Transaction has expired</h2>
+                        @endif
                 </div>
             </div>
         </main>
